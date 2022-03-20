@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Circular';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/circular/black.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Circular';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/circular/bold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Circular';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/circular/medium.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Circular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/circular/book.otf') format('truetype');
+}
+
+*{
+  box-sizing:border-box;
+  padding:0;margin:0;
+  font-family: 'Circular', 'Segoe UI', Tahoma, Geneva, Verdana;
+}
+/* make element unselectable with cursor */
+.unselectable {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.selectable {
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+}
+.abs-a{position:relative;}
+.abs-a a{position:absolute;top:0;bottom:0;left:0;right:0;}
+
+h1{font-size:32px;line-height:35.2px;}
+h2{font-size:24px;line-height:26.4px;}
+h3{font-size:20px;line-height:22px;}
+h4{font-size:18px;line-height:25.2px;}
+h5{font-size:16px;line-height:24px;}
+h6{font-size:14px;line-height:19.6px;}
