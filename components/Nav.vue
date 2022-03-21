@@ -2,24 +2,24 @@
   <nav class="pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
     2xl:gap-[60px] justify-center text-white">
     <Button class="active">
-      <span class="hidden lg:block">Sessions</span>
       <iconly class="lg:hidden" name="setting" size="26" />
+      <span class="text-[7px] lg:text-sm">Sessions</span>
     </Button>
     <Button>
-      <span class="hidden lg:block">Directoriy</span>
       <iconly class="lg:hidden" name="setting" size="26" />
+      <span class="text-[7px] lg:text-sm">Directoriy</span>
     </Button>
     <Button>
-      <span class="hidden lg:block">Submit a Question</span>
       <iconly class="lg:hidden" name="setting" size="26" />
+      <span class="text-[7px] lg:text-sm">Submit a Question</span>
     </Button>
     <Button>
-      <span class="hidden lg:block">Meet D Team</span>
       <iconly class="lg:hidden" name="setting" size="26" />
+      <span class="text-[7px] lg:text-sm">Meet D Team</span>
     </Button>
     <Button>
-      <span class="hidden lg:block">Archives</span>
       <iconly class="lg:hidden" name="setting" type="broken" size="26" />
+      <span class="text-[7px] lg:text-sm">Archives</span>
     </Button>
   </nav>
 </template>
@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 button{
-  @apply bg-white/10;
+  @apply bg-white/10 flex-col lg:flex-row;
 }
 button:nth-of-type(1).active{
   @apply bg-light-blue/50 after:bg-light-blue;
