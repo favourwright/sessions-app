@@ -1,10 +1,25 @@
 <template>
-  <nav class="pt-[44px] pb-[86px] flex gap-[2%] xl:gap-[60px] justify-center text-white">
-    <Button>Sessions</Button>
-    <Button>Directoriy</Button>
-    <Button>Submit a Question</Button>
-    <Button>Meet D Team</Button>
-    <Button>Archives</Button>
+  <nav class="pt-4 lg:pt-[44px] pb-6 lg:pb-[86px] flex gap-[2%] xl:gap-[60px] justify-center text-white">
+    <Button>
+      <span class="hidden lg:block">Sessions</span>
+      <template #icon><iconly class="lg:hidden" name="setting" type="broken" size="26" /></template>
+    </Button>
+    <Button>
+      <span class="hidden lg:block">Directoriy</span>
+      <template #icon><iconly class="lg:hidden" name="setting" type="broken" size="26" /></template>
+    </Button>
+    <Button>
+      <span class="hidden lg:block">Submit a Question</span>
+      <template #icon><iconly class="lg:hidden" name="setting" type="broken" size="26" /></template>
+    </Button>
+    <Button>
+      <span class="hidden lg:block">Meet D Team</span>
+      <template #icon><iconly class="lg:hidden" name="setting" type="broken" size="26" /></template>
+    </Button>
+    <Button>
+      <span class="hidden lg:block">Archives</span>
+      <template #icon><iconly class="lg:hidden" name="setting" type="broken" size="26" /></template>
+    </Button>
   </nav>
 </template>
 
