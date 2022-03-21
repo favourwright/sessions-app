@@ -15,6 +15,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  target: "static",
   server:{
     port: process.env.PORT || 3000
   },
