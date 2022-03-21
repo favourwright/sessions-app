@@ -1,6 +1,8 @@
 <template>
-  <div id="site" class="w-full min-h-screen bg-dark-gray">
+  <div id="site" class="w-full h-screen bg-dark-gray flex flex-col justify-between">
     <Header />
+    <Nuxt class="flex-grow" />
+    <Nav />
   </div>
 </template>
 

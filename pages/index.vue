@@ -1,5 +1,7 @@
 <template>
-  <div>HI</div>
+  <vue-scroll>
+    <div></div>
+  </vue-scroll>
 </template>
 
 <script>
