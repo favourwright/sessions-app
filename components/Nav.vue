@@ -35,7 +35,7 @@ button:nth-of-type(1).active{
   @apply bg-light-blue/50 after:bg-light-blue;
 }
 button.active{
-  @apply after:absolute after:top-[110%]
-  after:w-[40px] after:h-[14px] after:rounded-full
+  @apply after:absolute after:top-[120%]
+  after:w-[14px] lg:after:w-[40px] after:h-[14px] after:rounded-full
 }
 </style>
