@@ -1,6 +1,6 @@
 <template>
-  <nav class="pt-4 xl:pt-[44px] pb-8 xl:pb-[86px] flex gap-2
-    xl:gap-[60px] justify-center text-white">
+  <nav class="pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
+    2xl:gap-[60px] justify-center text-white">
     <Button class="active">
       <span class="hidden lg:block">Sessions</span>
       <iconly class="lg:hidden" name="setting" size="26" />
