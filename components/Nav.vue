@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+button{
+  @apply bg-white/10;
+}
 button:nth-of-type(1).active{
   @apply bg-light-blue/50 after:bg-light-blue;
 }
