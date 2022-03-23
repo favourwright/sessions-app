@@ -1,13 +1,17 @@
 <template>
   <div class="flex relative h-full overflow-hidden">
     <div
-      class="absolute flex h-full transition duration-1000 ease-in-out"
+      class="absolute flex items-center h-full
+      transition duration-1000 ease-in-out"
       :style="{ left: `${container_left}px` }">
-      <div class="min-w-[1000px]">
-        <h1>Sessions</h1>
-        <Search name="Search for event..." />
+      <div class="px-[192px]">
+        <h1 class="text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+        <Search class="w-[640px] mb-[33px]" name="Search for event..." />
+        <h2 class="text-[40px] text-gray-70 leading-[140%] font-semibold">
+          Here are some tailored events we made, <span class="text-white">just for you.</span>
+        </h2>
       </div>
-      <div class="min-w-[500px] bg-green-400 border-l-8" @click="Handle"></div>
+      <div class="min-w-[500px] h-full bg-green-400 border-l-8" @click="Handle"></div>
     </div>
   </div>
 </template>

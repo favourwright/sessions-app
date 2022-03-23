@@ -11,7 +11,8 @@
     </Button>
     <Button>
       <iconly name="setting" size="26" />
-      <span class="text-[7px] lg:text-sm">Submit a Question</span>
+      <span class="text-[7px] lg:text-sm">
+        Submit a Question</span>
     </Button>
     <Button>
       <iconly name="setting" size="26" />
