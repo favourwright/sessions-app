@@ -4,14 +4,14 @@
       class="absolute flex items-center h-full
       transition duration-1000 ease-in-out"
       :style="{ left: `${container_left}px` }">
-      <div class="px-[192px]">
-        <h1 class="text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
-        <Search class="w-[640px] mb-[33px]" name="Search for event..." />
-        <h2 class="text-[40px] text-gray-70 leading-[140%] font-semibold">
+      <div class="px-[5%] lg:px-[192px]">
+        <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+        <Search class="w-full lg:w-[640px] mb-[33px]" name="Search for event..." />
+        <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
           Here are some tailored events we made, <span class="text-white">just for you.</span>
         </h2>
       </div>
-      <div class="min-w-[500px] h-full bg-green-400 border-l-8" @click="Handle"></div>
+      <div class="min-w-[500px] h-full border-l-2 border-white/10" @click="Handle"></div>
     </div>
   </div>
 </template>
