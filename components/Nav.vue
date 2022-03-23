@@ -1,24 +1,24 @@
 <template>
-  <nav class="pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
+  <nav class="primary pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
     2xl:gap-[60px] justify-center text-white">
     <Button class="active">
-      <iconly v-if="$device.isMobileOrTablet" name="setting" size="26" />
+      <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Sessions</span>
     </Button>
     <Button>
-      <iconly v-if="$device.isMobileOrTablet" name="setting" size="26" />
+      <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Directoriy</span>
     </Button>
     <Button>
-      <iconly v-if="$device.isMobileOrTablet" name="setting" size="26" />
+      <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Submit a Question</span>
     </Button>
     <Button>
-      <iconly v-if="$device.isMobileOrTablet" name="setting" size="26" />
+      <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Meet D Team</span>
     </Button>
     <Button>
-      <iconly v-if="$device.isMobileOrTablet" name="setting" type="broken" size="26" />
+      <iconly name="setting" type="broken" size="26" />
       <span class="text-[7px] lg:text-sm">Archives</span>
     </Button>
   </nav>
