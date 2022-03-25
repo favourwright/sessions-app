@@ -5,22 +5,21 @@
       class="landing absolute h-full flex items-center ease-in-out left-0"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
+
       <div ref="landing_1"
-        class="px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full
-        float-left"
+        class="landing px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full"
         :style="`--width: ${landing_1}px;`">
         <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
         <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
         <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
           Here are some tailored events we made, <span class="text-white">just for you.</span>
         </h2>
-        <div>
-
-        </div>
+        <div></div>
       </div>
+
       <div
         ref="landing_2"
-        class="h-full float-left flex"
+        class="landing_2 h-full flex"
         :style="`--width: ${landing_2}px;`">
           <div class="flex-grow-0 flex items-center text-white">
             <div
@@ -33,7 +32,8 @@
           <div class="flex-grow bg-white/10">
             <h1>Hi from ere</h1>
           </div>
-        </div>
+      </div>
+
     </div>
   </div>
 </template>
