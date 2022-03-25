@@ -49,9 +49,21 @@
   min-width:var(--width,100%);
   max-width:var(--width,100%);
 }
+@media (max-width: 767px) {
+  .landing_1{
+    min-width:100%;
+    max-width:100%;
+  }
+}
 .landing_2{
   min-width:var(--width,100%);
   max-width:var(--width,100%);
+}
+@media (max-width: 767px) {
+  .landing_2{
+    min-width:100%;
+    max-width:100%;
+  }
 }
 @keyframes mymove {
   100% {transform: translateX(var(--left));}
