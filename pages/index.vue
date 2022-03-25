@@ -1,26 +1,27 @@
 <template>
   <div class="flex relative h-full overflow-hidden">
     <div
+      ref="landing"
       class="landing absolute h-full flex items-center ease-in-out left-0"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
-      <vue-scroll :ops="{ scrollPanel: { scrollingY: true } }">
-        <div ref="landing_1"
-          class="px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full
-          flex flex-col justify-center float-left">
-          <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
-          <Search class="w-full lg:w-[640px] mb-[33px]" name="Search for event..." />
-          <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
-            Here are some tailored events we made, <span class="text-white">just for you.</span>
-          </h2>
-          <div>
-            <pills />
-          </div>
+      <div ref="landing_1"
+        class="px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full
+        float-left"
+        :style="`--width: ${landing_1}px;`">
+        <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+        <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
+        <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
+          Here are some tailored events we made, <span class="text-white">just for you.</span>
+        </h2>
+        <div>
+
         </div>
-      </vue-scroll>
+      </div>
       <div
         ref="landing_2"
-        class="min-w-[500px] h-full float-left flex">
+        class="h-full float-left flex"
+        :style="`--width: ${landing_2}px;`">
           <div class="flex-grow-0 flex items-center text-white">
             <div
               @click="slide=!slide"
@@ -44,6 +45,14 @@
 .rotate{
   @apply -rotate-180;
 }
+.landing_1{
+  min-width:var(--width,100%);
+  max-width:var(--width,100%);
+}
+.landing_2{
+  min-width:var(--width,100%);
+  max-width:var(--width,100%);
+}
 @keyframes mymove {
   100% {transform: translateX(var(--left));}
 }
@@ -62,11 +71,19 @@ export default {
     return {
       slide: false,
       slide_amount:0,
+      landing_1:null,
+      landing_2:null,
       landing_2_is_visible:false,
     }
   },
   methods:{
-    getSize(){
+    setLandingWidth(){
+      // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
+      this.landing_1 = `${(window.innerWidth)-200}px`
+      this.landing_2 = `${(window.innerWidth)}px`
+      this.slide_amount = -this.getGlideAmount()
+    },
+    getGlideAmount(){
       return this.$refs.landing_1.clientWidth
     },
     iO(){
@@ -74,7 +91,7 @@ export default {
       let options = {
         root: null,
         rootMargin: '0px',
-        threshold: 1.0
+        threshold: 1
       }
       const ev = this.DoSom
       let observer = new IntersectionObserver(function(entries){
@@ -92,7 +109,8 @@ export default {
     }
   },
   mounted(){
-    this.slide_amount = -this.getSize()
+    this.setLandingWidth()
+    document.addEventListener('resize',()=>this.setLandingWidth())
     this.iO()
   }
 }

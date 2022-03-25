@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[54px] lg:h-[70px] rounded-full relative text-white">
+  <div class="h-[54px] lg:h-[70px] w-full rounded-full relative text-white">
     <div class="flex items-center h-full absolute px-[24px] lg:px-[31px]">
       <iconly class="mb-0.5" name="search" size="20" />
     </div>
