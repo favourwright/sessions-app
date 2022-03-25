@@ -13,6 +13,9 @@
           <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
             Here are some tailored events we made, <span class="text-white">just for you.</span>
           </h2>
+          <div>
+            <pills />
+          </div>
         </div>
       </vue-scroll>
       <div
@@ -21,7 +24,7 @@
           <div class="flex-grow-0 flex items-center text-white">
             <div
               @click="slide=!slide"
-              class="transform transition duration-300 ease-in-out"
+              class="transform transition duration-500 ease-in-out cursor-pointer"
               :class="{rotate:landing_2_is_visible}">
               <iconly class="ico" name="arrow-left2" size="48" />
             </div>
@@ -48,9 +51,11 @@
 
 <script>
 import Layout from "@/layouts/default"
+import Pills from '@/components/Molecules/Pills'
 export default {
   components: {
     Layout,
+    Pills,
   },
   name: "IndexPage",
   data(){
@@ -65,25 +70,26 @@ export default {
       return this.$refs.landing_1.clientWidth
     },
     iO(){
+      // intersection observer
       let options = {
         root: null,
         rootMargin: '0px',
         threshold: 1.0
       }
-
+      const ev = this.DoSom
       let observer = new IntersectionObserver(function(entries){
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            let elem = entry.target;
-            console.log(elem);
-            this.landing_2_is_visible=true
-          }
+          let elem = entry.target;
+          entry.isIntersecting? ev(true):ev(false)
         });
       }, options);
 
       let target = this.$refs.landing_2;
       observer.observe(target);
     },
+    DoSom(e){
+      this.landing_2_is_visible=e
+    }
   },
   mounted(){
     this.slide_amount = -this.getSize()
