@@ -7,7 +7,8 @@
       :style="`--left: ${slide_amount}px;`">
 
       <div ref="landing_1"
-        class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full"
+        class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
+        h-full transition-all duration-300"
         :style="`--width: ${landing_1}px;`">
         <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
         <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
@@ -19,7 +20,7 @@
 
       <div
         ref="landing_2"
-        class="landing_2 h-full flex"
+        class="landing_2 h-full flex transition-all duration-300"
         :style="`--width: ${landing_2}px;`">
           <div class="flex-grow-0 flex items-center text-white">
             <div
@@ -91,7 +92,7 @@ export default {
   methods:{
     async setLandingWidth(){
       // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
-      this.landing_1 = window.innerWidth-300
+      this.landing_1 = window.innerWidth-300 // calc amount to minus from css because of mobile devices
       this.landing_2 = window.innerWidth
       this.slide_amount = - await this.landing_1
     },
