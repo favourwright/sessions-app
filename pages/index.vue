@@ -7,7 +7,7 @@
       :style="`--left: ${slide_amount}px;`">
 
       <div ref="landing_1"
-        class="landing px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full"
+        class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px] h-full"
         :style="`--width: ${landing_1}px;`">
         <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
         <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
@@ -79,7 +79,7 @@ export default {
   methods:{
     setLandingWidth(){
       // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
-      this.landing_1 = window.innerWidth-200
+      this.landing_1 = window.innerWidth-300
       this.landing_2 = window.innerWidth
       this.slide_amount = -this.getGlideAmount()
     },
