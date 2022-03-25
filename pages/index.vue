@@ -79,8 +79,8 @@ export default {
   methods:{
     setLandingWidth(){
       // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
-      this.landing_1 = `${(window.innerWidth)-200}px`
-      this.landing_2 = `${(window.innerWidth)}px`
+      this.landing_1 = window.innerWidth-200
+      this.landing_2 = window.innerWidth
       this.slide_amount = -this.getGlideAmount()
     },
     getGlideAmount(){
