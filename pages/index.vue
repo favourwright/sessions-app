@@ -5,12 +5,11 @@
       class="landing absolute h-full flex items-center ease-in-out left-0"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
-      <vue-scroll :ops="ops">
+      <vue-scroll :ops="ops" class="min-w-[80%] lg:min-w-[unset]">
         <div ref="landing_1"
           class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
           h-full transition-all duration-300"
           :style="`--width: ${landing_1}px;`">
-
           <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
           <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
           <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
