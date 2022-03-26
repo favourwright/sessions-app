@@ -5,18 +5,20 @@
       class="landing absolute h-full flex items-center ease-in-out left-0"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
+        <vue-scroll :ops="ops">
+          <div ref="landing_1"
+            class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
+            h-full transition-all duration-300"
+            :style="`--width: ${landing_1}px;`">
 
-      <div ref="landing_1"
-        class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
-        h-full transition-all duration-300"
-        :style="`--width: ${landing_1}px;`">
-        <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
-        <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
-        <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
-          Here are some tailored events we made, <span class="text-white">just for you.</span>
-        </h2>
-        <div></div>
-      </div>
+            <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+            <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
+            <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
+              Here are some tailored events we made, <span class="text-white">just for you.</span>
+            </h2>
+            <div></div>
+          </div>
+        </vue-scroll>
       <div
         ref="landing_2"
         class="landing_2 h-full flex transition-all duration-300"
@@ -37,6 +39,75 @@
     </div>
   </div>
 </template>
+
+<script>
+import Layout from "@/layouts/default"
+import Pills from '@/components/Molecules/Pills'
+export default {
+  components: {
+    Layout,
+    Pills,
+  },
+  name: "IndexPage",
+  data(){
+    return {
+      ops: {
+        vuescroll: {
+          detectResize: true,
+        },
+        scrollPanel: {
+          // scrollingX: false,
+        },
+      },
+      slide: false,
+      slide_amount:0,
+      landing_1:null,
+      landing_2:null,
+      landing_2_is_visible:false,
+    }
+  },
+  methods:{
+    async setLandingWidth(){
+      // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
+      this.landing_1 = window.innerWidth
+      this.landing_2 = window.innerWidth
+      this.slide_amount = - await this.landing_1
+
+      const slide =  setTimeout(() => {
+        this.landing_1 = window.innerWidth-300
+        this.slide_amount = -this.landing_1
+        clearTimeout(slide)
+      }, 1000);
+    },
+    iO(){
+      // intersection observer
+      let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1
+      }
+      const ev = this.DoSom
+      let observer = new IntersectionObserver(function(entries){
+        entries.forEach(entry => {
+          let elem = entry.target;
+          entry.isIntersecting? ev(true):ev(false)
+        });
+      }, options);
+
+      let target = this.$refs.landing_2;
+      observer.observe(target);
+    },
+    DoSom(e){
+      this.landing_2_is_visible=e
+    }
+  },
+  mounted(){
+    this.setLandingWidth()
+    document.addEventListener('resize',()=>this.setLandingWidth())
+    this.iO()
+  }
+}
+</script>
 
 <style scoped>
 .slide{
@@ -69,58 +140,3 @@
   100% {transform: translateX(var(--left));}
 }
 </style>
-
-<script>
-import Layout from "@/layouts/default"
-import Pills from '@/components/Molecules/Pills'
-export default {
-  components: {
-    Layout,
-    Pills,
-  },
-  name: "IndexPage",
-  data(){
-    return {
-      slide: false,
-      slide_amount:0,
-      landing_1:null,
-      landing_2:null,
-      landing_2_is_visible:false,
-    }
-  },
-  methods:{
-    async setLandingWidth(){
-      // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
-      this.landing_1 = window.innerWidth-300 // calc amount to minus from css because of mobile devices
-      this.landing_2 = window.innerWidth
-      this.slide_amount = - await this.landing_1
-    },
-    iO(){
-      // intersection observer
-      let options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1
-      }
-      const ev = this.DoSom
-      let observer = new IntersectionObserver(function(entries){
-        entries.forEach(entry => {
-          let elem = entry.target;
-          entry.isIntersecting? ev(true):ev(false)
-        });
-      }, options);
-
-      let target = this.$refs.landing_2;
-      observer.observe(target);
-    },
-    DoSom(e){
-      this.landing_2_is_visible=e
-    }
-  },
-  mounted(){
-    this.setLandingWidth()
-    document.addEventListener('resize',()=>this.setLandingWidth())
-    this.iO()
-  }
-}
-</script>
