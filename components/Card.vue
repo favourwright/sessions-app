@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-90 rounded-[32px]">
-
+  <div class="bg-gray-90/10 rounded-[32px] py-[22px] px-[18px]">
+    gray
   </div>
 </template>
 

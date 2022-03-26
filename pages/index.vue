@@ -1,24 +1,26 @@
 <template>
-  <div class="flex relative h-full overflow-hidden">
+  <section class="flex relative h-full overflow-hidden">
     <div
       ref="landing"
       class="landing absolute h-full flex items-center ease-in-out left-0"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
-        <vue-scroll :ops="ops">
-          <div ref="landing_1"
-            class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
-            h-full transition-all duration-300"
-            :style="`--width: ${landing_1}px;`">
+      <vue-scroll :ops="ops">
+        <div ref="landing_1"
+          class="landing_1 px-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
+          h-full transition-all duration-300"
+          :style="`--width: ${landing_1}px;`">
 
-            <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
-            <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
-            <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
-              Here are some tailored events we made, <span class="text-white">just for you.</span>
-            </h2>
-            <div></div>
+          <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+          <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
+          <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
+            Here are some tailored events we made, <span class="text-white">just for you.</span>
+          </h2>
+          <div class="mt-8">
+            <Card />
           </div>
-        </vue-scroll>
+        </div>
+      </vue-scroll>
       <div
         ref="landing_2"
         class="landing_2 h-full flex transition-all duration-300"
@@ -37,7 +39,7 @@
       </div>
 
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
