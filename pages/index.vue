@@ -71,7 +71,6 @@ export default {
   },
   methods:{
     async setLandingWidth(){
-      // this.$refs.landing.style.width = `${(window.innerWidth)*2}px`
       this.landing_1 = window.innerWidth
       this.landing_2 = window.innerWidth
       this.slide_amount = - await this.landing_1
@@ -81,7 +80,6 @@ export default {
           ? document.querySelector('.landing_1').clientWidth
           : document.querySelector('.landing_1').clientWidth-300
         this.slide_amount = -this.landing_1
-        console.log(this.slide_amount);
         clearTimeout(slide)
       }, 0);
     },
@@ -103,8 +101,8 @@ export default {
       let target = this.$refs.landing_2;
       observer.observe(target);
     },
-    DoSom(e){
-      this.landing_2_is_visible=e
+    DoSom(bool){
+      this.landing_2_is_visible=bool
     }
   },
   mounted(){
