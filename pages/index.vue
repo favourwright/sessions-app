@@ -17,7 +17,6 @@
         </h2>
         <div></div>
       </div>
-
       <div
         ref="landing_2"
         class="landing_2 h-full flex transition-all duration-300"

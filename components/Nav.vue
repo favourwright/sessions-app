@@ -1,32 +1,34 @@
 <template>
   <nav class="primary pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
     2xl:gap-[60px] justify-center text-white">
-    <Button class="active">
+    <button-1 class="active">
       <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Sessions</span>
-    </Button>
-    <Button>
+    </button-1>
+    <button-1>
       <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Directoriy</span>
-    </Button>
-    <Button>
+    </button-1>
+    <button-1>
       <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">
         Submit a Question</span>
-    </Button>
-    <Button>
+    </button-1>
+    <button-1>
       <iconly name="setting" size="26" />
       <span class="text-[7px] lg:text-sm">Meet D Team</span>
-    </Button>
-    <Button>
+    </button-1>
+    <button-1>
       <iconly name="setting" type="broken" size="26" />
       <span class="text-[7px] lg:text-sm">Archives</span>
-    </Button>
+    </button-1>
   </nav>
 </template>
 
 <script>
+import Button1 from '@/components/Atoms/Button1'
 export default {
+  components: { Button1 },
   methods:{
   }
 }
