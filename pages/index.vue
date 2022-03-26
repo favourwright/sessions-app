@@ -16,7 +16,7 @@
             Here are some tailored events we made, <span class="text-white">just for you.</span>
           </h2>
           <div class="mt-8">
-            <Card />
+            <cards />
           </div>
         </div>
       </vue-scroll>
@@ -43,11 +43,13 @@
 
 <script>
 import Layout from "@/layouts/default"
-import Pills from '@/components/Molecules/Pills'
+import Pills from '@/components/molecules/Pills'
+import Cards from '@/components/molecules/Cards'
 export default {
   components: {
     Layout,
     Pills,
+    Cards,
   },
   name: "IndexPage",
   data(){
@@ -75,10 +77,13 @@ export default {
       this.slide_amount = - await this.landing_1
 
       const slide =  setTimeout(() => {
-        this.landing_1 = window.innerWidth-300
+        this.landing_1 = this.$device.isMobileOrTablet
+          ? document.querySelector('.landing_1').clientWidth
+          : document.querySelector('.landing_1').clientWidth-300
         this.slide_amount = -this.landing_1
+        console.log(this.slide_amount);
         clearTimeout(slide)
-      }, 1000);
+      }, 0);
     },
     iO(){
       // intersection observer
@@ -112,7 +117,7 @@ export default {
 
 <style scoped>
 .slide{
-  animation: mymove 2s 1 forwards;
+  animation: mymove 1s 1 forwards;
 }
 .rotate{
   @apply -rotate-180;
@@ -123,8 +128,8 @@ export default {
 }
 @media (max-width: 767px) {
   .landing_1{
-    min-width:80%;
-    max-width:80%;
+    min-width:100%;
+    max-width:100%;
   }
 }
 .landing_2{
