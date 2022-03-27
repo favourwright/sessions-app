@@ -15,7 +15,7 @@
           <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
             Here are some tailored events we made, <span class="text-white">just for you.</span>
           </h2>
-          <div class="mt-8">
+          <div class="mt-8 pb-[50px]">
             <cards />
           </div>
         </div>
