@@ -61,6 +61,9 @@ export default {
         scrollPanel: {
           // scrollingX: false,
         },
+        bar: {
+          opacity: 0.1,
+        }
       },
       slide: false,
       slide_amount:0,
