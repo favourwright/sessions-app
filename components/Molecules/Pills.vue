@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Pill from '../atoms/Pill'
+import Pill from '../Atoms/Pill'
 export default {
   components: { Pill },
 }

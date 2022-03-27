@@ -43,8 +43,8 @@
 
 <script>
 import Layout from "@/layouts/default"
-import Pills from '@/components/molecules/Pills'
-import Cards from '@/components/molecules/Cards'
+import Pills from '@/components/Molecules/Pills'
+import Cards from '@/components/Molecules/Cards'
 export default {
   components: {
     Layout,
