@@ -76,10 +76,10 @@ export default {
       this.slide_amount = - await this.landing_1
 
       const slide =  setTimeout(() => {
-        this.landing_1 = this.$device.isMobileOrTablet
-          ? document.querySelector('.landing_1').clientWidth
-          : document.querySelector('.landing_1').clientWidth-300
-        this.slide_amount = -this.landing_1
+        // this.landing_1 = this.$device.isMobileOrTablet
+        //   ? document.querySelector('.landing_1').clientWidth
+        //   : document.querySelector('.landing_1').clientWidth-300
+        // this.slide_amount = -this.landing_1
         clearTimeout(slide)
       }, 0);
     },
