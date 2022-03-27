@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Button1 from './atomss/Button1'
+import Button1 from './atoms/Button1'
 export default {
   components: { Button1 },
   methods:{
