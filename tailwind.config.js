@@ -22,6 +22,7 @@ module.exports = {
         'pink':'#FFB9B9',
         'moss-green':'#60705F',
         'light-blue':'#AEAFFF',
+        'gray-50-1':'#ECECEC',
         'gray-50-2':'#737373',
         'dark-gray':'#424F55',
         'dark-gray-2':'#3A474C',
