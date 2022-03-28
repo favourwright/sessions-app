@@ -7,7 +7,7 @@
       :style="`--left: ${slide_amount}px;`">
       <vue-scroll :ops="ops" class="min-w-[88%] lg:min-w-[unset]">
         <div ref="landing_1"
-          class="landing_1 pl-[5%] lg:px-[192px] pt-[50px] lg:pt-[77px]
+          class="landing_1 pl-[5%] lg:px-[120px] 2xl:px-[192px] pt-[50px] lg:pt-[77px]
           h-full transition-all duration-300"
           :style="`--width: ${landing_1}px;`">
           <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
@@ -28,12 +28,26 @@
             <div
               @click="slide=!slide"
               class="transform transition duration-500 ease-in-out cursor-pointer"
-              :class="{rotate:landing_2_is_visible}">
+              :class="{rotate:landing_2_is_visible, bob:!landing_2_is_visible}">
               <iconly class="ico" name="arrow-left2" size="48" />
             </div>
           </div>
-          <div class="flex-grow bg-white/10">
-            <h1>Hi from ere</h1>
+          <div class="flex-grow">
+            <vue-scroll :ops='ops'>
+              <div class="pl-0 lg:pl-8 pr-4 lg:pr-8 h-full block">
+                <div class="w-full mb-3 lg:mb-6 rounded-3xl lg:rounded-[48px] p-8 lg:p-12 bg-white/10">
+                  hey
+                </div>
+                <div class="grid grid-cols-2 gap-3 lg:gap-6">
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-8">
+                    yosh
+                  </div>
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-8">
+                    tata
+                  </div>
+                </div>
+              </div>
+            </vue-scroll>
           </div>
       </div>
 
@@ -145,5 +159,17 @@ export default {
 }
 @keyframes mymove {
   100% {transform: translateX(var(--left));}
+}
+
+.bob{
+  animation: bob 1s infinite;
+}
+@keyframes bob {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
 }
 </style>
