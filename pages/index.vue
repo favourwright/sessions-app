@@ -2,13 +2,14 @@
   <section class="flex relative h-full overflow-hidden">
     <div
       ref="landing"
-      class="landing absolute h-full flex items-center ease-in-out left-0"
+      class="landing absolute h-full flex items-center ease-in-out left-0
+      transition transform duration-500"
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`">
       <vue-scroll :ops="ops" class="min-w-[88%] lg:min-w-[unset]">
         <div ref="landing_1"
           class="landing_1 pl-[5%] lg:px-[120px] 2xl:px-[192px] pt-[50px] lg:pt-[77px]
-          h-full transition-all duration-300"
+          h-full"
           :style="`--width: ${landing_1}px;`">
           <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
           <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
@@ -28,8 +29,8 @@
             <div
               @click="slide=!slide"
               class="transform transition duration-500 ease-in-out cursor-pointer"
-              :class="{rotate:landing_2_is_visible, bob:!landing_2_is_visible}">
-              <iconly class="ico" name="arrow-left2" size="48" />
+              :class="{rotate:landing_2_is_visible}">
+              <iconly :class="{ico:true,bob:true}" name="arrow-left2" size="48" />
             </div>
           </div>
           <div class="flex-grow">
@@ -132,7 +133,7 @@ export default {
 
 <style scoped>
 .slide{
-  animation: mymove 1s 1 forwards;
+  transform: translateX(var(--left));
 }
 .rotate{
   @apply -rotate-180;
@@ -157,10 +158,6 @@ export default {
     max-width:100%;
   }
 }
-@keyframes mymove {
-  100% {transform: translateX(var(--left));}
-}
-
 .bob{
   animation: bob 1s infinite;
 }
