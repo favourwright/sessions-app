@@ -2,24 +2,30 @@
   <nav class="primary pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
     2xl:gap-[60px] justify-center text-white">
     <button-1 class="active">
-      <iconly name="setting" size="26" />
+      <iconly name="setting" size="28" />
       <span class="text-[7px] lg:text-sm">Sessions</span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="26" />
+      <iconly name="setting" size="28" />
       <span class="text-[7px] lg:text-sm">Directoriy</span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="26" />
+      <iconly name="setting" size="28" />
       <span class="text-[7px] lg:text-sm">
-        Submit a Question</span>
+        <span class="hidden lg:block">Submit a Question</span>
+        <span class="lg:hidden">Question?</span>
+      </span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="26" />
-      <span class="text-[7px] lg:text-sm">Meet D Team</span>
+      <iconly name="setting" size="28" />
+      <span class="text-[7px] lg:text-sm">
+        <span class="hidden lg:block">Meet D Team</span>
+        <span class="lg:hidden">D Team</span>
+        <span></span>
+      </span>
     </button-1>
     <button-1>
-      <iconly name="setting" type="broken" size="26" />
+      <iconly name="setting" type="broken" size="28" />
       <span class="text-[7px] lg:text-sm">Archives</span>
     </button-1>
   </nav>
@@ -54,7 +60,9 @@ button:nth-of-type(5).active{
   @apply bg-orange/50 after:bg-orange;
 }
 button.active{
-  @apply after:absolute after:top-[120%]
-  after:w-[14px] lg:after:w-[40px] after:h-[14px] after:rounded-full
+  @apply after:absolute after:bottom-0
+  lg:after:bottom-[unset] lg:after:top-[120%]
+  after:w-8 lg:after:w-[40px] after:h-2 lg:after:h-[14px]
+  after:rounded-tl-full after:rounded-tr-full lg:after:rounded-full
 }
 </style>
