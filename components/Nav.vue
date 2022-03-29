@@ -1,5 +1,5 @@
 <template>
-  <nav class="primary pt-4 2xl:pt-[44px] pb-8 2xl:pb-[86px] flex gap-2
+  <nav class="primary pt-3 lg:pt-4 2xl:pt-[44px] pb-3 lg:pb-8 2xl:pb-[86px] flex gap-2
     2xl:gap-[60px] justify-center text-white">
     <button-1 class="active">
       <iconly name="setting" size="28" />
