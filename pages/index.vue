@@ -36,14 +36,27 @@
           <div class="flex-grow">
             <vue-scroll :ops='ops'>
               <div class="pl-0 lg:pl-8 pr-4 lg:pr-8 h-full block">
-                <div class="w-full mb-3 lg:mb-6 rounded-3xl lg:rounded-[48px] p-8 lg:p-12 bg-white/10">
-                  hey
+                <div
+                  class="w-full rounded-3xl lg:rounded-[48px]
+                  p-6 lg:p-12 mb-3 lg:mb-6 bg-white/10
+                  flex flex-col-reverse lg:flex-row">
+                  <div class="w-full lg:w-1/2">
+                    heyyy
+                  </div>
+                  <div
+                    class="w-full lg:w-1/2 h-[200px] lg:h-[355px]
+                    rounded-2xl lg:rounded-[32px] overflow-hidden">
+                    <img
+                      class="w-full h-full object-cover"
+                      src="~/assets/images/playground.png"
+                      alt="">
+                  </div>
                 </div>
-                <div class="grid grid-cols-2 gap-3 lg:gap-6">
-                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
                     yosh
                   </div>
-                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-8">
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
                     tata
                   </div>
                 </div>
@@ -80,11 +93,11 @@ export default {
           opacity: 0.1,
         }
       },
-      slide: false,
+      slide: true,
       slide_amount:0,
       landing_1:null,
       landing_2:null,
-      landing_2_is_visible:false,
+      landing_2_is_visible:true,
     }
   },
   methods:{
