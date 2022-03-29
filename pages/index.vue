@@ -119,7 +119,7 @@ export default {
       let options = {
         root: null,
         rootMargin: '0px',
-        threshold: 1
+        threshold: 0.8
       }
       const ev = this.DoSom
       let observer = new IntersectionObserver(function(entries){

@@ -61,6 +61,7 @@ button:nth-of-type(5).active{
 }
 button.active{
   @apply after:absolute after:bottom-0
+  overflow-hidden lg:overflow-visible
   lg:after:bottom-[unset] lg:after:top-[120%]
   after:w-8 lg:after:w-[40px] after:h-2 lg:after:h-[14px]
   after:rounded-tl-full after:rounded-tr-full lg:after:rounded-full
