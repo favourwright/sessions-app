@@ -30,18 +30,23 @@
         :class="{show_landing_2_partly}"
         class="landing_2 flex h-full float-left w-full
         transform transition duration-300">
-        <div class="flex-grow-0 flex items-center text-white">
+        <div
+          :class="{'max-w-[10px]':landing_2_is_visible}"
+          class="flex-grow-0 flex items-center text-white">
           <div
             @click="HandleSlide"
-            class="transform transition duration-500 ease-in-out cursor-pointer"
+            class="transform transition duration-500 ease-in-out cursor-pointer z-10"
             :class="{rotate:landing_2_is_visible}">
-            <iconly :class="{ico:true,bob:true}" name="arrow-left2" size="48" />
+            <iconly
+              :class="{ico:true,bob:true}"
+              name="arrow-left2"
+              size="48" />
           </div>
         </div>
         <div class="flex-grow">
           <vue-scroll :ops='ops'>
-            <div class="pt-[100px] 2xl:pt-[126px] pb-[100px] lg:pb-[100px] 2xl:pb-[200px]">
-              <div class="flex flex-col lg:flex-row gap-8 pl-0 lg:pl-12 pr-4 lg:pr-12">
+            <div class="py-[100px] 2xl:pt-[126px] lg:pb-[100px] 2xl:pb-[200px]">
+              <div class="flex flex-col lg:flex-row gap-8 px-4 pl-2 lg:px-12">
                 <div class="flex-grow">
                   <div
                     class="w-full rounded-3xl lg:rounded-[48px]
