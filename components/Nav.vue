@@ -1,8 +1,8 @@
 <template>
-  <nav class="primary fixed bottom-1 md:bottom-0
+  <nav class="primary fixed justify-between lg:justify-center bottom-1 md:bottom-0
     left-2 md:left-0 right-2 md:right-0 z-10
-    pt-3 lg:pt-4 2xl:pt-[44px] pb-3 lg:pb-8 2xl:pb-[86px]
-    flex gap-2 2xl:gap-[60px] justify-center text-white
+    py-3 px-8 lg:px-0 lg:pt-4 2xl:pt-[44px] lg:pb-8 2xl:pb-[86px]
+    flex gap-2 2xl:gap-[60px] text-white
     bg-dark-gray/30 md:bg-dark-gray rounded-[32px] md:rounded-none
     backdrop-blur-xl backdrop-brightness-100 md:backdrop-filter-none">
     <button-1 class="active">
@@ -65,10 +65,8 @@ button:nth-of-type(5).active{
   @apply text-orange md:text-current md:bg-orange/50 after:bg-orange;
 }
 button.active{
-  @apply after:absolute after:bottom-0
-  overflow-hidden lg:overflow-visible
-  lg:after:bottom-[unset] lg:after:top-[120%]
-  after:w-8 lg:after:w-[40px] after:h-2 lg:after:h-[14px]
-  after:rounded-tl-full after:rounded-tr-full lg:after:rounded-full
+  @apply after:absolute after:top-[110%] lg:after:top-[120%]
+  after:w-8 lg:after:w-[40px] after:h-1 lg:after:h-[14px]
+  after:rounded-full
 }
 </style>
