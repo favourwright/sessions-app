@@ -31,7 +31,7 @@
         class="landing_2 flex h-full float-left w-full
         transform transition duration-300">
         <div
-          :class="{'max-w-[10px]':landing_2_is_visible}"
+          :class="{'max-w-[10px]':slide}"
           class="flex-grow-0 flex items-center text-white">
           <div
             @click="HandleSlide"
