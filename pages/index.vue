@@ -38,29 +38,72 @@
         </div>
         <div class="flex-grow">
           <vue-scroll :ops='ops'>
-            <div class="pl-0 lg:pl-8 pr-4 lg:pr-8 h-full">
-              <div
-                class="w-full rounded-3xl lg:rounded-[48px]
-                p-6 lg:p-12 mb-3 lg:mb-6 bg-white/10
-                flex flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-1/2">
-                  heyyy
-                </div>
+            <div class="flex flex-col lg:flex-row gap-8 pl-0 lg:pl-12 pr-4 lg:pr-12">
+              <div class="flex-grow">
                 <div
-                  class="w-full lg:w-1/2 h-[200px] lg:h-[355px]
-                  rounded-xl lg:rounded-[32px] overflow-hidden">
-                  <img
-                    class="w-full h-full object-cover"
-                    src="~/assets/images/playground.png"
-                    alt="">
+                  class="w-full rounded-3xl lg:rounded-[48px]
+                  p-6 lg:p-12 mb-3 lg:mb-6 bg-white/10
+                  flex flex-col-reverse lg:flex-row gap-4">
+
+                  <div class="w-full lg:w-1/2">
+                    <div class="flex justify-between items-center mb-4">
+                      <div>
+                        <h1
+                          class="text-4xl lg:text-5xl font-black mb-1 text-light-blue">
+                          Sessions
+                        </h1>
+                        <span class="text-white text-2xl font-medium">
+                          Jan 17th, 2022
+                        </span>
+                        <span class="text-gray-80 text-base font-medium">
+                          Friday, 10:10pm WAT
+                        </span>
+                      </div>
+                      <div class="text-white flex items-center gap-2">
+                        <span class="w-[10px] h-[10px] bg-red-1 rounded-full"></span>
+                        Live
+                      </div>
+                    </div>
+                    <p class="font-normal text-base text-white leading-[170%]">
+                      We exist to help people get answers to questions they've not found.
+                      Either that they cannot ask them or they do not know to frame them,
+                      or the answers are not framed well...
+                      <NuxtLink class="text-light-blue" to="#">Read more</NuxtLink>
+                    </p>
+                    <div class="people">
+
+                    </div>
+
+                    <div class="block mt-10">
+                      <button>Join Now</button>
+                      <button>View Event</button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="lg:w-1/2 relative min-h-[200px]
+                    rounded-xl lg:rounded-[20px] 2xl:rounded-[32px] overflow-hidden">
+                    <img
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                      src="~/assets/images/playground.png"
+                      alt="">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
+                    yosh
+                  </div>
+                  <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
+                    tata
+                  </div>
                 </div>
               </div>
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
-                <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
-                  yosh
-                </div>
-                <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
-                  tata
+              <div class="md:w-1/3">
+                <div>
+                  <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
+                    Upcoming Events
+                  </h2>
                 </div>
               </div>
             </div>

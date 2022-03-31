@@ -14,6 +14,7 @@ module.exports = {
       colors:{
         'success':'#65FDBD',
         'error':'#EC635C',
+        'red-1':'#EC2417',
         'stone':'#C0BB98',
         'yellow':'#FDD365',
         'orange':'#FF8944',
