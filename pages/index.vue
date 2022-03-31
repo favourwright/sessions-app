@@ -11,7 +11,7 @@
       <div ref="landing_1" class="landing_1 h-full float-left w-full">
         <vue-scroll :ops='ops'>
           <div
-            class="pr-[48px] lg:pr-[30%] pl-[5%] lg:pl-[120px] 2xl:pl-[192px] pt-[50px] lg:pt-[77px]">
+            class="px-[5%] lg:pr-[30%] lg:pl-[120px] 2xl:pl-[192px] pt-[50px] lg:pt-[77px]">
             <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
             <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
             <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">

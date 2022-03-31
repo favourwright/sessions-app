@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-start gap-3 lg:gap-6 2xl:gap-[66px] flex-wrap lg:flex-nowrap">
+<div class="flex justify-start gap-2 lg:gap-6 2xl:gap-[66px] flex-wrap lg:flex-nowrap">
   <card
     v-for="(card,i) in cards"
     :key="i"
