@@ -92,9 +92,7 @@
                   </div>
 
                   <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
-                    <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
-
-                    </div>
+                    <sessions />
                     <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
 
                     </div>
@@ -120,18 +118,20 @@
 <script>
 import Pills from '@/components/molecules/Pills'
 import Cards from '@/components/molecules/Cards'
+import Sessions from '@/components/molecules/Sessions'
 import Button2 from '@/components/atoms/Button2'
 export default {
   components: {
     Pills,
     Cards,
-    Button2
+    Button2,
+    Sessions
   },
   data:()=>({
-    slide:false,
+    slide:true,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:false,
+    landing_2_is_visible:true,
     ops: {
       vuescroll: {
         detectResize: true,
