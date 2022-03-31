@@ -3,34 +3,34 @@
     left-2 md:left-0 right-2 md:right-0 z-10
     py-3 px-8 lg:px-0 lg:pt-4 2xl:pt-[44px] lg:pb-8 2xl:pb-[86px]
     flex gap-2 2xl:gap-[60px] text-white
-    bg-dark-gray/30 md:bg-dark-gray rounded-[32px] md:rounded-none
-    backdrop-blur-xl backdrop-brightness-100 md:backdrop-filter-none">
+    bg-dark-gray/50 md:bg-dark-gray rounded-[32px] md:rounded-none
+    backdrop-blur-xl md:backdrop-filter-none">
     <button-1 class="active">
-      <iconly name="setting" size="28" />
-      <span class="text-[7px] lg:text-sm">Sessions</span>
+      <iconly name="activity" type="bulk" size="30" />
+      <span class="text-[10px] lg:text-sm">Sessions</span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="28" />
-      <span class="text-[7px] lg:text-sm">Directoriy</span>
+      <iconly name="folder" size="30" />
+      <span class="text-[10px] lg:text-sm">Directoriy</span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="28" />
-      <span class="text-[7px] lg:text-sm">
+      <iconly name="send" size="30" />
+      <span class="text-[10px] lg:text-sm">
         <span class="hidden lg:block">Submit a Question</span>
         <span class="lg:hidden">Question?</span>
       </span>
     </button-1>
     <button-1>
-      <iconly name="setting" size="28" />
-      <span class="text-[7px] lg:text-sm">
+      <iconly name="3user" size="30" />
+      <span class="text-[10px] lg:text-sm">
         <span class="hidden lg:block">Meet D Team</span>
         <span class="lg:hidden">D Team</span>
         <span></span>
       </span>
     </button-1>
     <button-1>
-      <iconly name="setting" type="broken" size="28" />
-      <span class="text-[7px] lg:text-sm">Archives</span>
+      <iconly name="bookmark" size="30" />
+      <span class="text-[10px] lg:text-sm">Archives</span>
     </button-1>
   </nav>
 </template>
@@ -65,8 +65,8 @@ button:nth-of-type(5).active{
   @apply text-orange md:text-current md:bg-orange/50 after:bg-orange;
 }
 button.active{
-  @apply after:absolute after:top-[110%] lg:after:top-[120%]
-  after:w-8 lg:after:w-[40px] after:h-1 lg:after:h-[14px]
+  @apply after:absolute after:top-0 lg:after:top-[120%]
+  after:w-8 lg:after:w-[40px] after:h-0 lg:after:h-[14px]
   after:rounded-full
 }
 </style>
