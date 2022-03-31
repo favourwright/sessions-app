@@ -71,13 +71,13 @@
                         or the answers are not framed well...
                         <NuxtLink class="text-light-blue" to="#">Read more</NuxtLink>
                       </p>
-                      <div class="people">
 
+                      <div class="people">
                       </div>
 
-                      <div class="block mt-10">
-                        <button>Join Now</button>
-                        <button>View Event</button>
+                      <div class="flex mt-10 gap-3">
+                        <button-2 class="active bg-light-blue" text="Join Now" />
+                        <button-2 text="View Event" />
                       </div>
                     </div>
 
@@ -100,7 +100,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="md:w-1/3 sticky top-20">
+
+                <div class="md:w-1/3">
                   <div>
                     <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
                       Upcoming Events
@@ -119,16 +120,18 @@
 <script>
 import Pills from '@/components/molecules/Pills'
 import Cards from '@/components/molecules/Cards'
+import Button2 from '@/components/atoms/Button2'
 export default {
   components: {
     Pills,
     Cards,
+    Button2
   },
   data:()=>({
-    slide:true,
+    slide:false,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:true,
+    landing_2_is_visible:false,
     ops: {
       vuescroll: {
         detectResize: true,

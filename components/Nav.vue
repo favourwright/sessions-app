@@ -44,7 +44,8 @@ export default {
 
 <style scoped>
 button{
-  @apply bg-white/10 flex-col lg:flex-row;
+  @apply bg-white/10 flex-col lg:flex-row
+  text-white;
 }
 button:nth-of-type(1).active{
   @apply bg-light-blue/50 after:bg-light-blue;
