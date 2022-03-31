@@ -11,7 +11,7 @@
     </button-1>
     <button-1>
       <iconly name="folder" size="30" />
-      <span class="text-[10px] lg:text-sm">Directoriy</span>
+      <span class="text-[10px] lg:text-sm">Directory</span>
     </button-1>
     <button-1>
       <iconly name="send" size="30" />
