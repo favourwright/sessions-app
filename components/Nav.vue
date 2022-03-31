@@ -1,8 +1,10 @@
 <template>
-  <nav class="primary fixed bottom-0 left-0 right-0 z-10
+  <nav class="primary fixed bottom-1 md:bottom-0
+    left-2 md:left-0 right-2 md:right-0 z-10
     pt-3 lg:pt-4 2xl:pt-[44px] pb-3 lg:pb-8 2xl:pb-[86px]
     flex gap-2 2xl:gap-[60px] justify-center text-white
-    bg-dark-gray">
+    bg-dark-gray/30 md:bg-dark-gray rounded-[32px] md:rounded-none
+    backdrop-blur-xl backdrop-brightness-100 md:backdrop-filter-none">
     <button-1 class="active">
       <iconly name="setting" size="28" />
       <span class="text-[7px] lg:text-sm">Sessions</span>
@@ -44,23 +46,23 @@ export default {
 
 <style scoped>
 button{
-  @apply bg-white/10 flex-col lg:flex-row
+  @apply md:bg-white/10 flex-col lg:flex-row
   text-white;
 }
 button:nth-of-type(1).active{
-  @apply bg-light-blue/50 after:bg-light-blue;
+  @apply text-light-blue md:text-current md:bg-light-blue/50 after:bg-light-blue;
 }
 button:nth-of-type(2).active{
-  @apply bg-pink/50 after:bg-pink;
+  @apply text-pink md:text-current md:bg-pink/50 after:bg-pink;
 }
 button:nth-of-type(3).active{
-  @apply bg-yellow/50 after:bg-yellow;
+  @apply text-yellow md:text-current md:bg-yellow/50 after:bg-yellow;
 }
 button:nth-of-type(4).active{
-  @apply bg-success/50 after:bg-success;
+  @apply text-success md:text-current md:bg-success/50 after:bg-success;
 }
 button:nth-of-type(5).active{
-  @apply bg-orange/50 after:bg-orange;
+  @apply text-orange md:text-current md:bg-orange/50 after:bg-orange;
 }
 button.active{
   @apply after:absolute after:bottom-0

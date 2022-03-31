@@ -1,17 +1,19 @@
 <template>
   <section
-    class="flex w-full h-screen
-    pt-[74px] 2xl:pt-[126px] pb-[82px] md:pb-[54px] lg:pb-[88px] 2xl:pb-[170px]
-    bg-dark-gray transition duration-300 overflow-hidden">
+    class="flex w-full h-screenbg-dark-gray
+    transition duration-300 overflow-hidden">
     <div
       :class="{slide}"
       :style="`--left: ${slide_amount}px;`"
       class="landing block flex-grow
       transform transition duration-300">
-      <div ref="landing_1" class="landing_1 h-full float-left w-full">
+      <div
+        ref="landing_1"
+        class="landing_1 h-full float-left w-full">
         <vue-scroll :ops='ops'>
           <div
-            class="px-[5%] lg:pr-[30%] lg:pl-[120px] 2xl:pl-[192px] pt-[50px] lg:pt-[77px]">
+            class="px-[5%] lg:pr-[30%] lg:pl-[120px] 2xl:pl-[192px]
+            pt-[100px] 2xl:pt-[126px] pb-[100px] lg:pb-[100px] 2xl:pb-[200px]">
             <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
             <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
             <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
@@ -38,7 +40,7 @@
         </div>
         <div class="flex-grow">
           <vue-scroll :ops='ops'>
-            <div class="py-10">
+            <div class="pt-[100px] 2xl:pt-[126px] pb-[100px] lg:pb-[100px] 2xl:pb-[200px]">
               <div class="flex flex-col lg:flex-row gap-8 pl-0 lg:pl-12 pr-4 lg:pr-12">
                 <div class="flex-grow">
                   <div
