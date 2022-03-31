@@ -1,6 +1,9 @@
 <template>
-  <div class="text-white px-[5%] md:px-[10%] 2xl:px-[128px]
-    py-6 2xl:py-[51px] flex justify-between items-center tracking-widest">
+  <header
+    class="text-white fixed top-0 left-0 right-0
+    z-10 bg-dark-gray
+    px-[5%] md:px-[10%] 2xl:px-[128px] py-6 2xl:py-[51px]
+    flex justify-between items-center tracking-widest">
     <img class="h-[22px]" src="/logo.svg" alt="logo">
     <h4 class="font-medium text-[12px]">MEET D EXPERTS</h4>
     <nav class="hidden lg:block">
@@ -10,7 +13,7 @@
         <li class="min-w-[96px]">Contact Us</li>
       </ul>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script>

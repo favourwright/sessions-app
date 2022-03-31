@@ -1,7 +1,7 @@
 <template>
-  <div id="site" class="w-full h-screen bg-dark-gray flex flex-col justify-between">
+  <div id="site" class="flex h-screen bg-dark-gray">
     <Header />
-    <Nuxt class="flex-grow" />
+    <Nuxt />
     <Nav />
   </div>
 </template>
@@ -11,3 +11,7 @@ export default {
 
 }
 </script>
+
+<style>
+
+</style>

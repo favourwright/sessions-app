@@ -1,6 +1,8 @@
 <template>
-  <nav class="primary pt-3 lg:pt-4 2xl:pt-[44px] pb-3 lg:pb-8 2xl:pb-[86px] flex gap-2
-    2xl:gap-[60px] justify-center text-white">
+  <nav class="primary fixed bottom-0 left-0 right-0 z-10
+    pt-3 lg:pt-4 2xl:pt-[44px] pb-3 lg:pb-8 2xl:pb-[86px]
+    flex gap-2 2xl:gap-[60px] justify-center text-white
+    bg-dark-gray">
     <button-1 class="active">
       <iconly name="setting" size="28" />
       <span class="text-[7px] lg:text-sm">Sessions</span>
