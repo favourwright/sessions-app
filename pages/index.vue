@@ -80,10 +80,10 @@ export default {
     Cards,
   },
   data:()=>({
-    slide:false,
+    slide:true,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:false,
+    landing_2_is_visible:true,
     ops: {
       vuescroll: {
         detectResize: true,
@@ -107,7 +107,7 @@ export default {
       this.slide_amount = -landing_1.clientWidth
       // wait a bit before showing landing 2 partly
       setTimeout(() => {
-        this.show_landing_2_partly=true
+        this.show_landing_2_partly=this.slide==false?true:false
       }, 1000);
     },
     HandleSlide(){
