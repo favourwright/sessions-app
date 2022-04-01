@@ -11,14 +11,15 @@
       <button-1
         v-for="(nav,i) in nav_list"
         :key="i"
-        :class="{active:nav.active}">
+        :class="{active:nav.active}"
+        @click.native="HandleMenu(i)">
         <iconly :name="nav.icon" :type="nav.active?'bulk':'light'" size="30" />
         <span class="text-[10px] lg:text-sm">
           <span class="hidden lg:block">{{nav.name}}</span>
           <span class="lg:hidden">{{nav.name_mob?nav.name_mob:nav.name}}</span>
         </span>
       </button-1>
-      
+
       <div class="railing"><div></div></div>
     </div>
   </nav>
@@ -60,6 +61,9 @@ export default {
     ]
   }),
   methods:{
+    HandleMenu(index){
+      this.nav_list.map((nav,i)=>nav.active = i==index)
+    }
   }
 }
 </script>
@@ -109,7 +113,7 @@ button:nth-of-type(5).active ~ .railing div{
   rounded-full
 }
 .railing div{
-  @apply absolute left-0 top-0 w-[164px] h-full  flex justify-center
+  @apply absolute left-0 top-0 w-[164px] ml-0 h-full  flex justify-center
   after:absolute after:h-full lg:after:w-[40px] after:rounded-full
   transition duration-500 ease-in-out
 }
