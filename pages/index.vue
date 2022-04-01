@@ -99,7 +99,7 @@
                   </div>
 
                   <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
-                    <sessions />
+                    <sessions date="2022-04-29 23:59:00" />
                     <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
 
                     </div>

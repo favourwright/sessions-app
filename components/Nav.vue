@@ -7,6 +7,7 @@
     <div
       class="flex flex-grow md:flex-grow-0 gap-2 2xl:gap-[60px]
       justify-between lg:justify-center relative">
+
       <button-1
         v-for="(nav,i) in nav_list"
         :key="i"
@@ -17,6 +18,7 @@
           <span class="lg:hidden">{{nav.name_mob?nav.name_mob:nav.name}}</span>
         </span>
       </button-1>
+      
       <div class="railing"><div></div></div>
     </div>
   </nav>
