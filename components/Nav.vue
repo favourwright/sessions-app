@@ -71,7 +71,7 @@ export default {
 <style scoped>
 button{
   @apply md:bg-white/10 flex-col lg:flex-row
-  text-white;
+  text-white transition duration-500;
 }
 button:nth-of-type(1).active{
   @apply text-light-blue md:text-current md:bg-light-blue/50;
