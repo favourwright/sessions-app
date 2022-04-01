@@ -47,7 +47,7 @@
           <vue-scroll :ops='ops'>
             <div class="py-[100px] 2xl:pt-[126px] lg:pb-[100px] 2xl:pb-[200px]">
               <div class="flex flex-col lg:flex-row gap-8 px-4 pl-2 lg:px-12">
-                <div class="flex-grow">
+                <div class="w-full md:w-2/3">
                   <div
                     class="w-full rounded-3xl lg:rounded-[48px]
                     p-6 lg:p-12 mb-3 lg:mb-6 bg-white/10
@@ -105,10 +105,11 @@
                 </div>
 
                 <div class="md:w-1/3">
-                  <div>
+                  <div class="h-full flex flex-col">
                     <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
                       Upcoming Events
                     </h2>
+                    <sessions-upcoming class="flex-grow" />
                   </div>
                 </div>
               </div>
@@ -124,19 +125,21 @@
 import Cards from '@/components/molecules/Cards'
 import Sessions from '@/components/molecules/Sessions'
 import SessionsMain from '@/components/molecules/SessionsMainEvent'
+import SessionsUpcoming from '@/components/molecules/SessionsUpcomingEvent'
 import Button2 from '@/components/atoms/Button2'
 export default {
   components: {
     Cards,
     Button2,
     Sessions,
-    SessionsMain
+    SessionsMain,
+    SessionsUpcoming,
   },
   data:()=>({
-    slide:false,
+    slide:true,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:false,
+    landing_2_is_visible:true,
     ops: {
       vuescroll: {
         detectResize: true,
