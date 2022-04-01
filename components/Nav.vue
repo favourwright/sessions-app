@@ -1,5 +1,5 @@
 <template>
-  <nav class="primary flex justify-center fixed bottom-1 md:bottom-0
+  <nav class="primary unselectable flex justify-center fixed bottom-1 md:bottom-0
     left-2 md:left-0 right-2 md:right-0 z-10
     py-3 px-8 lg:px-0 lg:pt-4 2xl:pt-[44px] lg:pb-8 2xl:pb-[86px]
     text-white bg-dark-gray/50 md:bg-dark-gray rounded-[32px] md:rounded-none
