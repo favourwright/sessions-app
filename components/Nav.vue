@@ -6,8 +6,8 @@
     backdrop-blur-xl md:backdrop-filter-none">
     <div
       class="flex flex-grow md:flex-grow-0 gap-2 2xl:gap-[60px]
-      justify-between lg:justify-center">
-      <button-1 class="active">
+      justify-between lg:justify-center relative">
+      <button-1>
         <iconly name="activity" type="bulk" size="30" />
         <span class="text-[10px] lg:text-sm">Sessions</span>
       </button-1>
@@ -30,10 +30,11 @@
           <span></span>
         </span>
       </button-1>
-      <button-1>
+      <button-1 class="active">
         <iconly name="bookmark" size="30" />
         <span class="text-[10px] lg:text-sm">Archives</span>
       </button-1>
+      <div class="railing"><div></div></div>
     </div>
   </nav>
 </template>
@@ -53,24 +54,48 @@ button{
   text-white;
 }
 button:nth-of-type(1).active{
-  @apply text-light-blue md:text-current md:bg-light-blue/50 after:bg-light-blue;
+  @apply text-light-blue md:text-current md:bg-light-blue/50;
+}
+button:nth-of-type(1).active ~ .railing div{
+  @apply ml-[calc((164px+8px)*0)] 2xl:ml-[calc((164px+60px)*0)]
+  after:bg-light-blue
 }
 button:nth-of-type(2).active{
-  @apply text-pink md:text-current md:bg-pink/50 after:bg-pink;
+  @apply text-pink md:text-current md:bg-pink/50
+}
+button:nth-of-type(2).active ~ .railing div{
+  @apply ml-[calc((164px+8px)*1)] 2xl:ml-[calc((164px+60px)*1)]
+  after:bg-pink
 }
 button:nth-of-type(3).active{
-  @apply text-yellow md:text-current md:bg-yellow/50 after:bg-yellow;
+  @apply text-yellow md:text-current md:bg-yellow/50
+}
+button:nth-of-type(3).active ~ .railing div{
+  @apply ml-[calc((164px+8px)*2)] 2xl:ml-[calc((164px+60px)*2)]
+  after:bg-yellow
 }
 button:nth-of-type(4).active{
-  @apply text-success md:text-current md:bg-success/50 after:bg-success;
+  @apply text-success md:text-current md:bg-success/50;
+}
+button:nth-of-type(4).active ~ .railing div{
+  @apply ml-[calc((164px+8px)*3)] 2xl:ml-[calc((164px+60px)*3)]
+  after:bg-success
 }
 button:nth-of-type(5).active{
-  @apply text-orange md:text-current md:bg-orange/50 after:bg-orange;
+  @apply text-orange md:text-current md:bg-orange/50;
 }
-button.active{
-  @apply after:absolute after:top-0 lg:after:top-[120%]
-  after:w-8 lg:after:w-[40px] after:h-0 lg:after:h-[14px]
-  after:rounded-full
+button:nth-of-type(5).active ~ .railing div{
+  @apply ml-[calc((164px+8px)*4)] 2xl:ml-[calc((164px+60px)*4)]
+  after:bg-orange
+}
+.railing{
+  @apply absolute top-[120%] left-0 w-full lg:h-[14px] overflow-hidden
+  rounded-full
+}
+.railing div{
+  @apply absolute left-0 top-0 w-[164px] h-full  flex justify-center
+  after:absolute after:h-full lg:after:w-[40px] after:rounded-full
+  transition duration-500 ease-in-out
 }
 @media (min-width: 767px) {
   nav.primary button > *:nth-child(1){
