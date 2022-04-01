@@ -1,4 +1,5 @@
 <template>
+  <vue-scroll :ops='ops'>
   <div class="flex gap-2 lg:gap-5">
     <pill
       v-for="(pill,n) in pills"
@@ -6,6 +7,7 @@
       :bg_class="pill.bg_class"
       :text="pill.text" />
   </div>
+  </vue-scroll>
 </template>
 
 <script>
@@ -30,6 +32,19 @@ export default {
       ]
     }
   },
+  data:()=>({
+    ops: {
+      vuescroll: {
+        detectResize: true,
+      },
+      scrollPanel: {
+        // scrollingX: false,
+      },
+      bar: {
+        opacity: 0.1,
+      }
+    },
+  }),
   components: { Pill },
 }
 </script>
