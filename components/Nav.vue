@@ -7,32 +7,15 @@
     <div
       class="flex flex-grow md:flex-grow-0 gap-2 2xl:gap-[60px]
       justify-between lg:justify-center relative">
-      <button-1>
-        <iconly name="activity" type="bulk" size="30" />
-        <span class="text-[10px] lg:text-sm">Sessions</span>
-      </button-1>
-      <button-1>
-        <iconly name="folder" size="30" />
-        <span class="text-[10px] lg:text-sm">Directory</span>
-      </button-1>
-      <button-1>
-        <iconly name="send" size="30" />
+      <button-1
+        v-for="(nav,i) in nav_list"
+        :key="i"
+        :class="{active:nav.active}">
+        <iconly :name="nav.icon" :type="nav.active?'bulk':'light'" size="30" />
         <span class="text-[10px] lg:text-sm">
-          <span class="hidden lg:block">Submit a Question</span>
-          <span class="lg:hidden">Question?</span>
+          <span class="hidden lg:block">{{nav.name}}</span>
+          <span class="lg:hidden">{{nav.name_mob?nav.name_mob:nav.name}}</span>
         </span>
-      </button-1>
-      <button-1>
-        <iconly name="3user" size="30" />
-        <span class="text-[10px] lg:text-sm">
-          <span class="hidden lg:block">Meet D Team</span>
-          <span class="lg:hidden">D Team</span>
-          <span></span>
-        </span>
-      </button-1>
-      <button-1 class="active">
-        <iconly name="bookmark" size="30" />
-        <span class="text-[10px] lg:text-sm">Archives</span>
       </button-1>
       <div class="railing"><div></div></div>
     </div>
@@ -43,6 +26,37 @@
 import Button1 from '@/components/atoms/Button1'
 export default {
   components: { Button1 },
+  data:()=>({
+    nav_list:[
+      {
+        name:'Sessions',
+        icon:'activity',
+        active:true
+      },
+      {
+        name:'Directory',
+        icon:'folder',
+        active:false
+      },
+      {
+        name:'Submit a Question',
+        name_mob:'Question?',
+        icon:'send',
+        active:false
+      },
+      {
+        name:'Meet D Team',
+        name_mob:'D Team',
+        icon:'3user',
+        active:false
+      },
+      {
+        name:'Archives',
+        icon:'bookmark',
+        active:false
+      }
+    ]
+  }),
   methods:{
   }
 }
