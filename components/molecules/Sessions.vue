@@ -1,14 +1,14 @@
 <template>
 <div class="grid grid-cols-3 gap-4 rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
-  <div class="bg-white/10 rounded-2xl p-4">
+  <div class="bg-white/10 rounded-2xl p-4 flex flex-col justify-between">
     <h4 class="text-gray-80 text-xs lg:text-base">Days</h4>
     <h2 class="text-3xl lg:text-5xl text-white">{{ days | two_digits }}</h2>
   </div>
-  <div class="bg-white/10 rounded-2xl p-4">
+  <div class="bg-white/10 rounded-2xl p-4 flex flex-col justify-between">
     <h4 class="text-gray-80 text-xs lg:text-base">Hours</h4>
     <h2 class="text-3xl lg:text-5xl text-white">{{ hours | two_digits }}</h2>
   </div>
-  <div class="bg-white/10 rounded-2xl p-4">
+  <div class="bg-white/10 rounded-2xl p-4 flex flex-col justify-between">
     <h4 class="text-gray-80 text-xs lg:text-base">Minutes</h4>
     <h2
       :class="{'text-error':days==0&&hours==0&&minutes<10}"

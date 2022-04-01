@@ -113,7 +113,7 @@ button:nth-of-type(5).active ~ .railing div{
   rounded-full
 }
 .railing div{
-  @apply absolute left-0 top-0 w-[164px] ml-0 h-full  flex justify-center
+  @apply absolute left-0 top-0 w-[164px] ml-0 h-full flex justify-center
   after:absolute after:h-full lg:after:w-[40px] after:rounded-full
   transition-all duration-500 ease-in-out
 }

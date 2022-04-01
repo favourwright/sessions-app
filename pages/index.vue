@@ -100,9 +100,7 @@
 
                   <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
                     <sessions date="2022-04-29 23:59:00" />
-                    <div class="rounded-2xl lg:rounded-3xl bg-white/10 p-6 lg:p-8">
-
-                    </div>
+                    <sessions-main />
                   </div>
                 </div>
 
@@ -123,22 +121,22 @@
 </template>
 
 <script>
-import Pills from '@/components/molecules/Pills'
 import Cards from '@/components/molecules/Cards'
 import Sessions from '@/components/molecules/Sessions'
+import SessionsMain from '@/components/molecules/SessionsMainEvent'
 import Button2 from '@/components/atoms/Button2'
 export default {
   components: {
-    Pills,
     Cards,
     Button2,
-    Sessions
+    Sessions,
+    SessionsMain
   },
   data:()=>({
-    slide:false,
+    slide:true,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:false,
+    landing_2_is_visible:true,
     ops: {
       vuescroll: {
         detectResize: true,
