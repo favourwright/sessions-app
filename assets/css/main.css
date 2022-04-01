@@ -63,10 +63,3 @@ h3{font-size:20px;line-height:22px;}
 h4{font-size:18px;line-height:25.2px;}
 h5{font-size:16px;line-height:24px;}
 h6{font-size:14px;line-height:19.6px;}
-
-/*  */
-@media (min-width: 767px) {
-  nav.primary button > *:nth-child(1){
-    display:none;
-  }
-}

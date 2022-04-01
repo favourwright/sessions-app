@@ -31,7 +31,7 @@
         class="landing_2 flex h-full float-left w-full
         transform transition duration-300">
         <div
-          :class="{'max-w-[10px]':slide}"
+          :class="{'max-w-[10px] md:max-w-none':slide}"
           class="flex-grow-0 flex items-center text-white">
           <div
             @click="HandleSlide"
@@ -135,10 +135,10 @@ export default {
     Sessions
   },
   data:()=>({
-    slide:true,
+    slide:false,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:true,
+    landing_2_is_visible:false,
     ops: {
       vuescroll: {
         detectResize: true,

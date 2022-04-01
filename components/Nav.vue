@@ -1,37 +1,40 @@
 <template>
-  <nav class="primary fixed justify-between lg:justify-center bottom-1 md:bottom-0
+  <nav class="primary flex justify-center fixed bottom-1 md:bottom-0
     left-2 md:left-0 right-2 md:right-0 z-10
     py-3 px-8 lg:px-0 lg:pt-4 2xl:pt-[44px] lg:pb-8 2xl:pb-[86px]
-    flex gap-2 2xl:gap-[60px] text-white
-    bg-dark-gray/50 md:bg-dark-gray rounded-[32px] md:rounded-none
+    text-white bg-dark-gray/50 md:bg-dark-gray rounded-[32px] md:rounded-none
     backdrop-blur-xl md:backdrop-filter-none">
-    <button-1 class="active">
-      <iconly name="activity" type="bulk" size="30" />
-      <span class="text-[10px] lg:text-sm">Sessions</span>
-    </button-1>
-    <button-1>
-      <iconly name="folder" size="30" />
-      <span class="text-[10px] lg:text-sm">Directory</span>
-    </button-1>
-    <button-1>
-      <iconly name="send" size="30" />
-      <span class="text-[10px] lg:text-sm">
-        <span class="hidden lg:block">Submit a Question</span>
-        <span class="lg:hidden">Question?</span>
-      </span>
-    </button-1>
-    <button-1>
-      <iconly name="3user" size="30" />
-      <span class="text-[10px] lg:text-sm">
-        <span class="hidden lg:block">Meet D Team</span>
-        <span class="lg:hidden">D Team</span>
-        <span></span>
-      </span>
-    </button-1>
-    <button-1>
-      <iconly name="bookmark" size="30" />
-      <span class="text-[10px] lg:text-sm">Archives</span>
-    </button-1>
+    <div
+      class="flex flex-grow md:flex-grow-0 gap-2 2xl:gap-[60px]
+      justify-between lg:justify-center">
+      <button-1 class="active">
+        <iconly name="activity" type="bulk" size="30" />
+        <span class="text-[10px] lg:text-sm">Sessions</span>
+      </button-1>
+      <button-1>
+        <iconly name="folder" size="30" />
+        <span class="text-[10px] lg:text-sm">Directory</span>
+      </button-1>
+      <button-1>
+        <iconly name="send" size="30" />
+        <span class="text-[10px] lg:text-sm">
+          <span class="hidden lg:block">Submit a Question</span>
+          <span class="lg:hidden">Question?</span>
+        </span>
+      </button-1>
+      <button-1>
+        <iconly name="3user" size="30" />
+        <span class="text-[10px] lg:text-sm">
+          <span class="hidden lg:block">Meet D Team</span>
+          <span class="lg:hidden">D Team</span>
+          <span></span>
+        </span>
+      </button-1>
+      <button-1>
+        <iconly name="bookmark" size="30" />
+        <span class="text-[10px] lg:text-sm">Archives</span>
+      </button-1>
+    </div>
   </nav>
 </template>
 
@@ -68,5 +71,10 @@ button.active{
   @apply after:absolute after:top-0 lg:after:top-[120%]
   after:w-8 lg:after:w-[40px] after:h-0 lg:after:h-[14px]
   after:rounded-full
+}
+@media (min-width: 767px) {
+  nav.primary button > *:nth-child(1){
+    display:none;
+  }
 }
 </style>
