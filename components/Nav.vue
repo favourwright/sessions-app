@@ -115,7 +115,7 @@ button:nth-of-type(5).active ~ .railing div{
 .railing div{
   @apply absolute left-0 top-0 w-[164px] ml-0 h-full  flex justify-center
   after:absolute after:h-full lg:after:w-[40px] after:rounded-full
-  transition duration-500 ease-in-out
+  transition-all duration-500 ease-in-out
 }
 @media (min-width: 767px) {
   nav.primary button > *:nth-child(1){
