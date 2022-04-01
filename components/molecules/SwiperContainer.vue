@@ -4,7 +4,6 @@
   class="swiper"
   :options="swiperOptions">
   <slot></slot>
-  <div class="swiper-pagination" slot="pagination"></div>
 </swiper>
 </template>
 
@@ -22,13 +21,13 @@ export default {
       type: Number, default:()=>3
     },
     gap_md:{
-      type: Number, default:()=>20
+      type: Number, default:()=>0
     },
     slidesPerView_lg:{
       type: Number, default:()=>3
     },
     gap_lg:{
-      type: Number, default:()=>20
+      type: Number, default:()=>0
     },
   },
   components: { Swiper },
@@ -36,20 +35,14 @@ export default {
     return {
       swiperOptions: {
         spaceBetween: 30,
-        // loop: true,
+        loop: true,
         autoplay: {
           disableOnInteraction: false,
         },
         watchOverflow:true,
-        updateOnWindowResize:true,
         keyboard: {
           enabled: true,
         },
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   dynamicBullets: true,
-        //   clickable: true,
-        // },
         breakpoints:{
           '0': {
             slidesPerView: this.slidesPerView_sm,
