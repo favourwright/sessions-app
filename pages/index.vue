@@ -133,10 +133,10 @@ export default {
     SessionsMain
   },
   data:()=>({
-    slide:true,
+    slide:false,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:true,
+    landing_2_is_visible:false,
     ops: {
       vuescroll: {
         detectResize: true,

@@ -1,18 +1,24 @@
 <template>
-<div class="flex justify-start gap-3 lg:gap-6 2xl:gap-[66px] flex-wrap lg:flex-nowrap">
-  <card
-    v-for="(card,i) in cards"
-    :key="i"
-    :text='card.text'
-    :icon='card.icon'
-    :type='card.type' />
+<div class="block h-[202px] relative">
+  <div class="absolute top-0 left-0 w-full h-full">
+    <swiper-container>
+      <swipers v-for="(card,i) in cards" :key="i">
+        <card
+          :text='card.text'
+          :icon='card.icon'
+          :type='card.type' />
+      </swipers>
+    </swiper-container>
+  </div>
 </div>
 </template>
 
 <script>
 import Card from '@/components/Card'
+import SwiperContainer from '@/components/molecules/SwiperContainer'
+import Swipers from '@/components/Swipers'
 export default {
-  components: { Card },
+  components: { Card,SwiperContainer,Swipers },
   props:{
     cards:{
       type:Array,
@@ -34,6 +40,33 @@ export default {
         },
       ]
     }
-  }
+  },
+  // props:{
+  //   text:{
+  //     type:String,
+  //     default:()=>'UX Design'
+  //   },
+  //   type:{
+  //     type:String,
+  //     default:()=>'tags'
+  //   },
+  //   icon:{
+  //     type:String,
+  //     default:()=>'git.svg'
+  //   }
+  // },
+  data:()=>({
+    ops: {
+      vuescroll: {
+        detectResize: true,
+      },
+      scrollPanel: {
+        // scrollingX: false,
+      },
+      bar: {
+        opacity: 0.1,
+      }
+    },
+  }),
 }
 </script>

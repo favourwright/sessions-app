@@ -13,19 +13,19 @@ import { Swiper } from 'vue-awesome-swiper'
 export default {
   props:{
     slidesPerView_sm:{
-      type: Number, default:()=>1
+      type: Number, default:()=>2
     },
     gap_sm:{
       type: Number, default:()=>10
     },
     slidesPerView_md:{
-      type: Number, default:()=>2
+      type: Number, default:()=>3
     },
     gap_md:{
       type: Number, default:()=>20
     },
     slidesPerView_lg:{
-      type: Number, default:()=>2
+      type: Number, default:()=>3
     },
     gap_lg:{
       type: Number, default:()=>20
@@ -41,6 +41,7 @@ export default {
           disableOnInteraction: false,
         },
         watchOverflow:true,
+        updateOnWindowResize:true,
         keyboard: {
           enabled: true,
         },

@@ -19,11 +19,11 @@ export default {
         bg_class:'bg-light-blue/10 text-light-blue'
       },
       {
-        text:'UI Design',
+        text:'Frontend',
         bg_class:'bg-light-blue/10 text-light-blue'
       },
       {
-        text:'UI Design',
+        text:'VueJs',
         bg_class:'bg-light-blue/10 text-light-blue'
       }
     ]
