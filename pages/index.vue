@@ -13,8 +13,8 @@
         <vue-scroll :ops='ops'>
           <div
             class="px-[5%] lg:pr-[30%] lg:pl-[120px] 2xl:pl-[192px]
-            pt-[100px] 2xl:pt-[126px] pb-[100px] lg:pb-[100px] 2xl:pb-[200px]">
-            <h1 class="text-[42px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
+            pt-[90px] 2xl:pt-[126px] pb-[100px] lg:pb-[100px] 2xl:pb-[200px]">
+            <h1 class="text-[52px] lg:text-[64px] mb-[33px] font-black text-light-blue">Sessions</h1>
             <Search class="w-full lg:w-[640px] lg:max-w-full mb-[33px]" name="Search for event..." />
             <h2 class="text-[26px] lg:text-[40px] text-gray-70 leading-[140%] font-semibold">
               Here are some tailored events we made, <span class="text-white">just for you.</span>
@@ -45,8 +45,8 @@
         </div>
         <div class="flex-grow">
           <vue-scroll :ops='ops'>
-            <div class="py-[100px] 2xl:pt-[126px] lg:pb-[100px] 2xl:pb-[200px]">
-              <div class="flex flex-col lg:flex-row gap-8 px-4 pl-2 lg:px-12">
+            <div class="pt-[90px] 2xl:pt-[126px] lg:pb-[100px] 2xl:pb-[200px]">
+              <div class="flex flex-col lg:flex-row gap-12 2xl:gap-8 px-4 pl-2 lg:px-12">
                 <div class="w-full md:w-2/3">
                   <div
                     class="w-full rounded-3xl lg:rounded-[48px]

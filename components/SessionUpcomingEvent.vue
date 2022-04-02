@@ -2,16 +2,20 @@
   <div
     class="rounded-3xl p-4 bg-white/10 min-h-[164px]
     grid grid-cols-5 gap-4">
-    <div class="col-span-3 h-full flex gap-2 flex-col justify-between">
-      <h3 class="text-gray-80 font-semibold text-[22px]">
+    <div class="col-span-3 h-full flex gap-1 flex-col justify-between">
+      <h3 class="text-gray-80 font-semibold text-lg lg:text-[22px] leading-snug">
         Finding your niche as a creative...
       </h3>
-      <div class="flex justify-between flex-col md:flex-row md:items-end">
-        <div>
-          <span class="text-white font-medium text-[20px]">Jan 7th, 2022</span>
-          <span class="text-gray-80 font-medium text-[16px]">Friday, 10:00pm WAT</span>
+      <div class="flex justify-between items-end flex-col lg:flex-row">
+        <div class="leading-none">
+          <span class="text-white font-medium text-base lg:text-[20px]">Jan 7th, 2022</span>
+          <span class="text-gray-80 font-medium text-sm lg:text-[16px]">Friday, 10:00pm WAT</span>
         </div>
-        <button class="self-start md:self-auto">RSVP</button>
+        <button
+          class="px-[24px] py-[10px] rounded-full bg-light-blue text-dark-gray
+          text-[10px] font-semibold self-auto w-full lg:w-auto mt-1">
+          RSVP
+        </button>
       </div>
     </div>
     <div class="col-span-2 bg-white/10 rounded-2xl relative overflow-hidden">
