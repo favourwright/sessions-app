@@ -6,7 +6,9 @@
         :key="i"
         class="w-[22.96px] border border-white
         bg-white rounded-full overflow-hidden">
-        <img :src="require(`~/assets/images/${person}`)">
+        <img
+          class="w-full h-full object-cover"
+          :src="require(`~/assets/images/${person}`)">
       </div>
     </div>
     <span class="font-semibold text-sm text-white">{{text}}</span>
