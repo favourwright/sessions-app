@@ -13,9 +13,7 @@
         :class="{active:nav.active}"
         @click.native="HandleMenu(i)">
         <iconly :name="nav.icon" :type="nav.active?'bulk':'light'" size="30" />
-        <span
-          class="text-[10px] lg:text-sm transition-all duration-300"
-          :class="{hidden:!nav.active}">
+        <span class="text-[10px] lg:text-sm">
           <span class="hidden lg:block">{{nav.name}}</span>
           <span class="lg:hidden">{{nav.name_mob?nav.name_mob:nav.name}}</span>
         </span>
