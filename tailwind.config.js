@@ -41,6 +41,8 @@ module.exports = {
       },
       screens: {
         'mobile': {'max': '767px'},
+        'mobile-lg': {'min': '475px', 'max': '767px'},
+        'desktop-md': {'min': '768px', 'max': '1280px'},
       },
     },
   },

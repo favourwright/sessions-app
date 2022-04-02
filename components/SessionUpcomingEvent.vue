@@ -6,7 +6,7 @@
       <h3 class="text-gray-80 font-semibold text-lg lg:text-[22px] leading-snug">
         {{title}}
       </h3>
-      <div class="flex justify-between items-end flex-col lg:flex-row">
+      <div class="flex justify-between md:items-end flex-col lg:flex-row">
         <div class="leading-none">
           <span class="text-white font-medium text-base lg:text-[20px]">{{date}}</span>
           <span class="text-gray-80 font-medium text-sm lg:text-[16px]">{{time}}</span>

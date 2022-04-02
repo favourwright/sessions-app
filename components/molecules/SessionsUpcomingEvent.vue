@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between gap-3 lg:gap-6 mt-2 lg:mt-4">
+  <div class="flex flex-col 2xl:justify-between gap-3 lg:gap-6 mt-2 lg:mt-4">
     <session-upcoming
       v-for="(session,n) in sessions"
       :key="n"

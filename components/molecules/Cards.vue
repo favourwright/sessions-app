@@ -1,6 +1,6 @@
 <template>
 <div class="block h-[202px] relative">
-  <div class="absolute top-0 left-0 w-full h-full">
+  <div class="absolute top-0 left-0 w-full lg:w-4/5 2xl:w-2/5 h-full">
     <swiper-container>
       <swipers v-for="(card,i) in cards" :key="i">
         <card

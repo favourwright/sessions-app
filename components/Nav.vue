@@ -7,14 +7,15 @@
     <div
       class="flex flex-grow md:flex-grow-0 gap-2 2xl:gap-[60px]
       justify-between lg:justify-center relative">
-
       <button-1
         v-for="(nav,i) in nav_list"
         :key="i"
         :class="{active:nav.active}"
         @click.native="HandleMenu(i)">
         <iconly :name="nav.icon" :type="nav.active?'bulk':'light'" size="30" />
-        <span class="text-[10px] lg:text-sm">
+        <span
+          class="text-[10px] lg:text-sm transition-all duration-300"
+          :class="{hidden:!nav.active}">
           <span class="hidden lg:block">{{nav.name}}</span>
           <span class="lg:hidden">{{nav.name_mob?nav.name_mob:nav.name}}</span>
         </span>
