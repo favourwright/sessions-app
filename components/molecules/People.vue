@@ -19,10 +19,10 @@ export default {
     people:{
       Array,
       default:()=>[
-        'playground.png',
-        'playground.png',
-        'playground.png',
-        'playground.png',
+        'pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg',
+        'mymind-tZCrFpSNiIQ-unsplash.jpg',
+        'lucas-kapla-wQLAGv4_OYs-unsplash.jpg',
+        'pawel-czerwinski-Lki74Jj7H-U-unsplash.jpg',
       ]
     },
     text:{
