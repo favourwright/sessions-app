@@ -29,8 +29,7 @@
       <NuxtLink class="text-light-blue" to="#">Read more</NuxtLink>
     </p>
 
-    <div class="people">
-    </div>
+    <people class="mt-4" />
 
     <div class="grid grid-cols-2 lg:flex mt-10 gap-3">
       <button-2 class="active" bg='bg-light-blue' text="Join Now" />
@@ -51,9 +50,10 @@
 
 <script>
 import Button2 from '@/components/atoms/Button2'
+import People from '@/components/molecules/People'
 export default {
   components: {
-    Button2,
+    Button2, People,
   },
 }
 </script>
