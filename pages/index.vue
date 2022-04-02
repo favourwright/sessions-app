@@ -104,7 +104,7 @@
                   </div>
                 </div>
 
-                <div class="md:w-1/3">
+                <div class="md:w-1/3 mb-24">
                   <div class="h-full flex flex-col">
                     <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
                       Upcoming Events
