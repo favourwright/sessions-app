@@ -58,9 +58,6 @@
 
                 <div class="md:w-1/3 mb-24 md:mb-0">
                   <div class="h-full flex flex-col">
-                    <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
-                      Upcoming Events
-                    </h2>
                     <sessions-upcoming class="flex-grow" />
                   </div>
                 </div>

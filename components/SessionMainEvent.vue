@@ -33,7 +33,7 @@
     </div>
 
     <div class="grid grid-cols-2 lg:flex mt-10 gap-3">
-      <button-2 class="active bg-light-blue" text="Join Now" />
+      <button-2 class="active" bg='bg-light-blue' text="Join Now" />
       <button-2 text="View Event" />
     </div>
   </div>

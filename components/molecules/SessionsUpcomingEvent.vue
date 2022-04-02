@@ -1,13 +1,18 @@
 <template>
-  <div class="flex flex-col 2xl:justify-between gap-3 lg:gap-6 mt-2 lg:mt-4">
-    <session-upcoming
-      v-for="(session,n) in sessions"
-      :key="n"
-      :title="session.title"
-      :date="session.date"
-      :time="session.time"
-      :image="session.image"
-    />
+  <div>
+    <h2 class="text-[26px] lg:text-[40px] text-white leading-[140%] font-semibold">
+      Upcoming Events
+    </h2>
+    <div class="flex flex-col 2xl:justify-between gap-3 lg:gap-6 mt-2 lg:mt-4">
+      <session-upcoming
+        v-for="(session,n) in sessions"
+        :key="n"
+        :title="session.title"
+        :date="session.date"
+        :time="session.time"
+        :image="session.image"
+      />
+    </div>
   </div>
 </template>
 
