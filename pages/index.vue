@@ -67,6 +67,9 @@
         </div>
       </div>
     </div>
+    <modal ref="upcoming">
+      <h1 class="text-5xl text-black">Taskkk</h1>
+    </modal>
   </section>
 </template>
 
@@ -76,6 +79,7 @@ import Sessions from '@/components/molecules/Sessions'
 import SessionMain from '@/components/SessionMainEvent'
 import SessionsMainTitle from '@/components/SessionsMainEventTitle'
 import SessionsUpcoming from '@/components/molecules/SessionsUpcomingEvent'
+import Modal from '@/components/Modal'
 export default {
   components: {
     Cards,
@@ -83,6 +87,7 @@ export default {
     SessionMain,
     SessionsMainTitle,
     SessionsUpcoming,
+    Modal
   },
   data:()=>({
     slide:true,

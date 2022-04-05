@@ -53,7 +53,7 @@ import Button2 from '@/components/atoms/Button2'
 import People from '@/components/molecules/People'
 export default {
   components: {
-    Button2, People,
+    Button2, People
   },
 }
 </script>
