@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-    <modal ref="upcoming">
+    <modal modal_ref="upcoming">
       <h1 class="text-5xl text-black">Taskkk</h1>
     </modal>
   </section>
