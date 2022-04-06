@@ -30,6 +30,7 @@ export default {
   plugins: [
     '@/plugins/iconly',
     '@/plugins/vuescroll',
+    '@/plugins/globalEvent.client',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
