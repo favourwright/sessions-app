@@ -11,6 +11,7 @@
       flex justify-center items-center
       transition-all duration-100">
       <div
+        @click="HandleOpenModal('another')"
         :class="[show_main ? 'scale-100' : 'scale-150']"
         class="rounded-3xl lg:rounded-[32px] 2xl:rounded-[48px]
         bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px]
@@ -22,7 +23,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 export default {
   props: {
     modal_ref: {
@@ -32,15 +33,17 @@ export default {
   },
   data:()=>({
     show_wrapper: false,
-    show_main: false
+    show_main: false,
   }),
-  computed:{
+  computed: {
     ...mapState(['modal']),
   },
   methods:{
+    ...mapActions(['HandleOpenModal', 'addToModalList', 'removeFromModalList']),
     CloseModal(){
       // only hide modal if its the current open modal
-      if(this.$refs[this.modal_ref] === this.$refs[this.modal.current_modal_name]){
+      if(this.modal_ref === this.modal.open_modal_list[this.modal.open_modal_list.length-1]){
+        this.removeFromModalList()
         this.show_main=false
         // wait for main to fadeout before hiding
         const timeout = setTimeout(()=>{
@@ -48,16 +51,19 @@ export default {
           clearTimeout(timeout)
         },100)
       }
+      console.log(this.modal.open_modal_list);
     },
-    OpenModal(){
-      if(this.$refs[this.modal_ref] === this.$refs[this.modal.current_modal_name]){
+    OpenModal(payload){
+      if(this.modal_ref === payload){
+        this.addToModalList(payload)
         this.show_wrapper = true
         const timeout = setTimeout(()=>{
           this.show_main=true
           clearTimeout(timeout)
         })
       }
-    }
+      console.log(this.modal.open_modal_list);
+    },
   },
   mounted(){
     EV_GLOBAL.$on("open-modal", this.OpenModal)

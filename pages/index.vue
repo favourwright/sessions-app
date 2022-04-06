@@ -68,7 +68,19 @@
       </div>
     </div>
     <modal modal_ref="upcoming">
-      <h1 class="text-5xl text-black">Taskkk</h1>
+      <h1 class="text-5xl text-black">
+        Modal
+      </h1>
+    </modal>
+    <modal modal_ref="test">
+      <h1 class="text-5xl text-black">
+        Modal test
+      </h1>
+    </modal>
+    <modal modal_ref="another">
+      <h1 class="text-5xl text-black">
+        Modal testa another
+      </h1>
     </modal>
   </section>
 </template>

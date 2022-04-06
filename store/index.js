@@ -1,17 +1,25 @@
 export const state = () => ({
   modal:{
-    current_modal_name:null,
+    open_modal_list:[]
   }
 })
 
 export const mutations = {
-  setCurrentModal(state, modal_name){
-    state.modal.current_modal_name = modal_name
+  addToModalList(state, payload){
+    state.modal.open_modal_list.push(payload)
   },
+  removeFromModalList(state){
+    state.modal.open_modal_list.pop()
+  }
 }
 export const actions = {
-  OpenModal({commit}, payload){
-    commit('setCurrentModal', payload)
-    EV_GLOBAL.$emit('open-modal') // second param is optional payload
+  HandleOpenModal({commit}, payload){
+    EV_GLOBAL.$emit('open-modal', payload)
+  },
+  addToModalList({commit}, payload){
+    commit('addToModalList', payload)
+  },
+  removeFromModalList({commit}){
+    commit('removeFromModalList')
   }
 }

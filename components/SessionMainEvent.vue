@@ -33,7 +33,7 @@
 
     <div class="grid grid-cols-2 lg:flex mt-10 gap-3">
       <button-2 class="active" bg='bg-light-blue' text="Join Now" />
-      <button-2 @click.native="OpenModal('upcoming')" text="View Event" />
+      <button-2 @click.native="HandleOpenModal('test')" text="View Event" />
     </div>
   </div>
 
@@ -57,7 +57,7 @@ export default {
     Button2, People
   },
   methods:{
-    ...mapActions(['OpenModal']),
+    ...mapActions(['HandleOpenModal']),
   }
 }
 </script>
