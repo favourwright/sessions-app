@@ -1,7 +1,7 @@
 export const state = () => ({
   modal:{
-    show_wrapper:true,
-    show_main:true,
+    show_wrapper:false,
+    show_main:false,
   }
 })
 
@@ -21,5 +21,12 @@ export const actions = {
       commit('toggle_wrapper')
       clearTimeout(timeout)
     },100)
+  },
+  OpenModal({commit}){
+    commit('toggle_wrapper')
+    const timeout = setTimeout(()=>{
+      commit('toggle_main')
+      clearTimeout(timeout)
+    })
   }
 }

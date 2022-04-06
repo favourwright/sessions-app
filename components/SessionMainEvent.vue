@@ -33,7 +33,7 @@
 
     <div class="grid grid-cols-2 lg:flex mt-10 gap-3">
       <button-2 class="active" bg='bg-light-blue' text="Join Now" />
-      <button-2 text="View Event" />
+      <button-2 @click.native="OpenModal" text="View Event" />
     </div>
   </div>
 
@@ -51,10 +51,14 @@
 <script>
 import Button2 from '@/components/atoms/Button2'
 import People from '@/components/molecules/People'
+import { mapActions } from 'vuex'
 export default {
   components: {
     Button2, People
   },
+  methods:{
+    ...mapActions(['CloseModal', 'OpenModal'])
+  }
 }
 </script>
 
