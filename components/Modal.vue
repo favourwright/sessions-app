@@ -23,7 +23,7 @@
         </div>
       </div>
       <close-btn
-        class="fixed top-6 right-6 text-white"
+        class="fixed top-6 right-6 text-white invisible lg:visible"
         @click.native="CloseModal" />
     </div>
   </div>
