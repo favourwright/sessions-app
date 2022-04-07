@@ -51,18 +51,19 @@ export default {
           clearTimeout(timeout)
         },100)
       }
-      console.log(this.modal.open_modal_list);
     },
     OpenModal(payload){
       if(this.modal_ref === payload){
-        this.addToModalList(payload)
+        // if payload is the last item on list don't push
+        if(this.modal.open_modal_list[this.modal.open_modal_list.length-1] !== payload){
+          this.addToModalList(payload)
+        }
         this.show_wrapper = true
         const timeout = setTimeout(()=>{
           this.show_main=true
           clearTimeout(timeout)
         })
       }
-      console.log(this.modal.open_modal_list);
     },
   },
   mounted(){
