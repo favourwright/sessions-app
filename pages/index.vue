@@ -68,19 +68,35 @@
       </div>
     </div>
     <modal modal_ref="upcoming">
-      <h1 class="text-5xl text-black">
-        Modal
-      </h1>
-    </modal>
-    <modal modal_ref="test">
-      <h1 class="text-5xl text-black">
-        Modal test
-      </h1>
-    </modal>
-    <modal modal_ref="another">
-      <h1 class="text-5xl text-black">
-        Modal testa another
-      </h1>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="">
+          <div>
+            <h1 class="text-4xl lg:text-5xl text-light-blue font-black mb-[32px]">
+              Getting Started with Figma; A Designer's First Steps
+            </h1>
+            <p class="text-[18px] leading-[170%] font-normal text-gray-80">
+              We exist to help people get answers to questions threy've
+              not found. Either that they cannot ask them or they do not
+              know to frame them, or the answers are not framed well.
+              Either that they cannot ask them or they do not know to frame
+              them, or the answers are not framed well.
+            </p>
+          </div>
+          <div></div>
+        </div>
+        <div class="flex flex-col overflow-auto order-first lg:order-none">
+          <div
+            class="rounded-2xl lg:rounded-[32px] bg-white/10 w-full
+            flex-grow min-h-[200px] relative overflow-hidden">
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="~/assets/images/playground.png"
+              alt="">
+          </div>
+          <!-- <div>haha</div> -->
+        </div>
+      </div>
     </modal>
   </section>
 </template>

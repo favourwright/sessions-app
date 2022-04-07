@@ -13,16 +13,25 @@
       <div
         :class="[show_main ? 'scale-100' : 'scale-150']"
         class="rounded-3xl lg:rounded-[32px] 2xl:rounded-[48px]
-        bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px]
-        transform transition-all duration-100 max-w-[84%] max-h-[80%]">
-        <slot></slot>
+        bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px] flex
+        transform transition-all duration-100
+        max-w-[80%] lg:max-w-[74%] max-h-[80%] lg:max-h-[80%]">
+        <div class="flex">
+          <vue-scroll :ops="ops">
+            <slot></slot>
+          </vue-scroll>
+        </div>
       </div>
+      <close-btn
+        class="fixed top-6 right-6 text-white"
+        @click.native="CloseModal" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import CloseBtn from '@/components/atoms/CloseBtn'
 export default {
   props: {
     modal_ref: {
@@ -30,9 +39,23 @@ export default {
       default: 'modal'
     }
   },
+  components: {
+    CloseBtn
+  },
   data:()=>({
     show_wrapper: false,
     show_main: false,
+    ops: {
+      vuescroll: {
+        detectResize: true,
+      },
+      scrollPanel: {
+        // scrollingX: false,
+      },
+      bar: {
+        opacity: 0.1,
+      }
+    },
   }),
   computed: {
     ...mapState(['modal']),
