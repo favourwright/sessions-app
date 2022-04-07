@@ -11,7 +11,6 @@
       flex justify-center items-center
       transition-all duration-100">
       <div
-        @click="HandleOpenModal('another')"
         :class="[show_main ? 'scale-100' : 'scale-150']"
         class="rounded-3xl lg:rounded-[32px] 2xl:rounded-[48px]
         bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px]
@@ -39,7 +38,7 @@ export default {
     ...mapState(['modal']),
   },
   methods:{
-    ...mapActions(['HandleOpenModal', 'addToModalList', 'removeFromModalList']),
+    ...mapActions(['addToModalList', 'removeFromModalList']),
     CloseModal(){
       // only hide modal if its the current open modal
       if(this.modal_ref === this.modal.open_modal_list[this.modal.open_modal_list.length-1]){
