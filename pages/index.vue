@@ -98,6 +98,9 @@
         </div>
       </div>
     </modal>
+    <modal modal_ref="join-now">
+      <h1>join now</h1>
+    </modal>
   </section>
 </template>
 

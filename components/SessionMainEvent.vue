@@ -32,7 +32,7 @@
     <people class="mt-4" />
 
     <div class="grid grid-cols-2 lg:flex mt-10 gap-3">
-      <button-2 class="active" bg='bg-light-blue' text="Join Now" />
+      <button-2 @click.native="HandleOpenModal('join-now')" class="active" bg='bg-light-blue' text="Join Now" />
       <button-2 @click.native="HandleOpenModal('upcoming')" text="View Event" />
     </div>
   </div>
