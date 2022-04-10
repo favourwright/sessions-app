@@ -1,5 +1,11 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
+    <h2
+      class="attendee-count
+      font-semibold text-gray-80 bg-white/10
+      rounded-full px-4 py-1 text-sm">
+      Attendees Count <strong class="text-white text-lg">134</strong>
+    </h2>
     <attendee
       v-for="(attendee,n) in attendees"
       :key="n"
