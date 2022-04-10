@@ -15,7 +15,7 @@
         class="rounded-3xl lg:rounded-[32px] 2xl:rounded-[48px]
         bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px] flex
         transform transition-all duration-100
-        max-w-[80%] lg:max-w-[74%] max-h-[80%] lg:max-h-[80%]">
+        max-w-[86%] lg:max-w-[74%] max-h-[84%] lg:max-h-[80%]">
         <div class="flex">
           <vue-scroll :ops="ops">
             <slot></slot>

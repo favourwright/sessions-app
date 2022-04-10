@@ -2,7 +2,7 @@
   <button
     class="font-semibold text-base
     flex items-center justify-center
-    px-4 lg:min-w-[148px] h-[53px]
+    px-6 lg:min-w-[148px] h-[53px]
     rounded-full text-white
     ring-[0.3px] ring-white ring-inset"
     v-text="text"
