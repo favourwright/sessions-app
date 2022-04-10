@@ -39,6 +39,11 @@ module.exports = {
         },
         'gold':'#FFBD80',
         'purple':'#B573EE',
+        'brands':{
+          'meet':'#00AC47',
+          'zoom':'#2D8CFF',
+          'skype':'#00aff0',
+        }
       },
       screens: {
         'mobile': {'max': '767px'},

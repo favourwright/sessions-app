@@ -73,17 +73,27 @@
         <div class="">
           <div>
             <h1 class="text-4xl lg:text-5xl text-light-blue font-black mb-[32px]">
-              Getting Started with Figma; A Designer's First Steps
+              Getting Started with Figma; A Designer’s First Steps
             </h1>
             <p class="text-[18px] leading-[170%] font-normal text-gray-80">
-              We exist to help people get answers to questions threy've
+              We exist to help people get answers to questions they’ve
               not found. Either that they cannot ask them or they do not
               know to frame them, or the answers are not framed well.
+            </p>
+            <p class="text-[18px] leading-[170%] font-normal text-gray-80">
               Either that they cannot ask them or they do not know to frame
               them, or the answers are not framed well.
             </p>
           </div>
-          <div></div>
+          <div class="mt-10 flex flex-col md:flex-row gap-2">
+            <div class="md:w-1/2">
+
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-xl font-semibold text-white mb-2">Event’s Conferencing App:</h2>
+              <conferencing-apps />
+            </div>
+          </div>
         </div>
         <div class="flex flex-col overflow-auto order-first lg:order-none">
           <div
@@ -93,8 +103,37 @@
               class="absolute top-0 left-0 w-full h-full object-cover"
               src="~/assets/images/playground.png"
               alt="">
+            <button
+              class="font-black text-lg text-white bg-white/10 rounded-xl
+              absolute bottom-5 left-5 2xl:bottom-4 2xl:left-4 h-12 px-5 2xl:h-16 2xl:px-[30px]
+              ring-[0.3px] ring-white ring-inset">
+              Ask A Question
+            </button>
           </div>
-          <!-- <div>haha</div> -->
+          <div
+            class="mt-8 flex flex-col-reverse md:flex-row justify-between
+            items-start md:items-end gap-5 lg:flex-nowrap overflow-hidden">
+            <div>
+              <dir class="flex justify-between md:justify-start md:space-x-4 items-center">
+                <h1
+                  class="text-2xl lg:text-[32px] font-black mb-1 text-light-blue">
+                  Sessions
+                </h1>
+                <div class="text-white flex items-center gap-2">
+                  <span class="w-[10px] h-[10px] bg-red-1 rounded-full"></span>
+                  Live
+                </div>
+              </dir>
+              <span class="text-white text-xl font-medium">
+                Jan 17th, 2022
+              </span>
+              <span class="text-gray-80 text-xl font-medium">
+                Friday, 10:10pm WAT
+              </span>
+            </div>
+
+            <button-2 @click.native="HandleOpenModal('join-now')" class="active" bg='bg-light-blue' text="Join Now" />
+          </div>
         </div>
       </div>
     </modal>
@@ -110,7 +149,10 @@ import Sessions from '@/components/molecules/Sessions'
 import SessionMain from '@/components/SessionMainEvent'
 import SessionsMainTitle from '@/components/SessionsMainEventTitle'
 import SessionsUpcoming from '@/components/molecules/SessionsUpcomingEvent'
+import Button2 from '@/components/atoms/Button2'
 import Modal from '@/components/Modal'
+import ConferencingApps from '@/components/molecules/ConferencingApps'
+import { mapActions } from 'vuex'
 export default {
   components: {
     Cards,
@@ -118,7 +160,9 @@ export default {
     SessionMain,
     SessionsMainTitle,
     SessionsUpcoming,
-    Modal
+    Modal,
+    Button2,
+    ConferencingApps
   },
   data:()=>({
     slide:true,
@@ -138,6 +182,7 @@ export default {
     },
   }),
   methods:{
+    ...mapActions(['HandleOpenModal']),
     Setup(){
       const landing = document.querySelector('.landing')
       const landing_1 = document.querySelector('.landing_1')

@@ -23,7 +23,7 @@
       </div>
     </div>
     <p class="font-normal text-base text-white leading-[170%]">
-      We exist to help people get answers to questions they've not found.
+      We exist to help people get answers to questions they’ve not found.
       Either that they cannot ask them or they do not know to frame them,
       or the answers are not framed well...
       <NuxtLink class="text-light-blue" to="#">Read more</NuxtLink>
