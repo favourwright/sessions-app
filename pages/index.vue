@@ -87,7 +87,7 @@
           </div>
           <div class="mt-10 flex flex-col md:flex-row gap-2">
             <div class="md:w-1/2">
-
+              <attendees />
             </div>
             <div class="md:w-1/2">
               <h2 class="text-xl font-semibold text-white mb-2">Event’s Conferencing App:</h2>
@@ -152,6 +152,7 @@ import SessionsUpcoming from '@/components/molecules/SessionsUpcomingEvent'
 import Button2 from '@/components/atoms/Button2'
 import Modal from '@/components/Modal'
 import ConferencingApps from '@/components/molecules/ConferencingApps'
+import Attendees from '@/components/molecules/Attendees'
 import { mapActions } from 'vuex'
 export default {
   components: {
@@ -162,7 +163,8 @@ export default {
     SessionsUpcoming,
     Modal,
     Button2,
-    ConferencingApps
+    ConferencingApps,
+    Attendees
   },
   data:()=>({
     slide:true,
