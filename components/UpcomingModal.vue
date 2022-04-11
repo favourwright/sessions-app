@@ -47,15 +47,12 @@
           class="mt-8 flex flex-col-reverse md:flex-row justify-between
           items-start md:items-end gap-5 lg:flex-nowrap overflow-hidden">
           <div>
-            <dir class="flex justify-between md:justify-start md:space-x-4 items-center">
+            <dir class="flex space-x-4 items-center">
               <h1
                 class="text-2xl lg:text-[32px] font-black mb-1 text-light-blue">
                 Sessions
               </h1>
-              <div class="text-white flex items-center gap-2">
-                <span class="w-[10px] h-[10px] bg-red-1 rounded-full"></span>
-                Live
-              </div>
+              <live-badge />
             </dir>
             <span class="text-white text-xl font-medium">
               Jan 17th, 2022
@@ -76,13 +73,15 @@ import Modal from '@/components/Modal'
 import ConferencingApps from '@/components/molecules/ConferencingApps'
 import Attendees from '@/components/molecules/Attendees'
 import Button2 from '@/components/atoms/Button2'
+import LiveBadge from '@/components/atoms/LiveBadge'
 import { mapActions } from 'vuex'
 export default {
   components:{
     Modal,
     Attendees,
     ConferencingApps,
-    Button2
+    Button2,
+    LiveBadge
   },
   methods:{
     ...mapActions(['HandleOpenModal']),

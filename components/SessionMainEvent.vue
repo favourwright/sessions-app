@@ -17,10 +17,7 @@
           Friday, 10:10pm WAT
         </span>
       </div>
-      <div class="text-white flex items-center gap-2">
-        <span class="w-[10px] h-[10px] bg-red-1 rounded-full"></span>
-        Live
-      </div>
+      <live-badge />
     </div>
     <p class="font-normal text-base text-white leading-[170%]">
       We exist to help people get answers to questions they’ve not found.
@@ -51,10 +48,13 @@
 <script>
 import Button2 from '@/components/atoms/Button2'
 import People from '@/components/molecules/People'
+import LiveBadge from '@/components/atoms/LiveBadge'
 import { mapActions } from 'vuex'
 export default {
   components: {
-    Button2, People
+    Button2,
+    People,
+    LiveBadge
   },
   methods:{
     ...mapActions(['HandleOpenModal']),
