@@ -24,7 +24,7 @@
         </div>
         <close-btn
           v-if="cancel_btn_is_inside"
-          class="absolute bg-black/30
+          class="absolute bg-black/30 md:bg-white/10
           top-3 lg:top-[16px] right-3 lg:right-[16px]"
           @click.native="CloseModal" />
       </div>
