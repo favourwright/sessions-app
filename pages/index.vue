@@ -85,7 +85,7 @@
               them, or the answers are not framed well.
             </p>
           </div>
-          <div class="mt-10 flex flex-col md:flex-row gap-2">
+          <div class="mt-10 flex flex-col md:flex-row gap-6 md:gap-2">
             <div class="md:w-1/2">
               <attendees />
             </div>
@@ -97,7 +97,7 @@
         </div>
         <div class="flex flex-col overflow-auto order-first lg:order-none">
           <div
-            class="rounded-2xl lg:rounded-[32px] bg-white/10 w-full
+            class="rounded-2xl 2x:rounded-[32px] bg-white/10 w-full
             flex-grow min-h-[200px] relative overflow-hidden">
             <img
               class="absolute top-0 left-0 w-full h-full object-cover"
@@ -105,7 +105,8 @@
               alt="">
             <button
               class="font-black text-lg text-white bg-white/10 rounded-xl
-              absolute bottom-5 left-5 2xl:bottom-4 2xl:left-4 h-12 px-5 2xl:h-16 2xl:px-[30px]
+              absolute bottom-2 left-2 md:bottom-5 md:left-5 2xl:bottom-4 2xl:left-4 h-10 md:h-12
+              px-3 md:px-5 2xl:h-16 2xl:px-[30px]
               ring-[0.3px] ring-white ring-inset">
               Ask A Question
             </button>
