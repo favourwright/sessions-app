@@ -7,7 +7,7 @@
     <div
       @click.self="CloseModal"
       :class="[show_main ? 'opacity-100' : 'opacity-0']"
-      class="bg-black/70 w-full h-full
+      class="bg-black/70 w-full h-full relative
       flex justify-center items-center
       transition-all duration-100">
       <div
@@ -23,7 +23,8 @@
         </div>
       </div>
       <close-btn
-        class="fixed top-6 right-6 text-white invisible lg:visible"
+        class="fixed top-[10%] right-[10%]
+        md:top-6 md:right-6 bg-black/30 md:bg-white/10"
         @click.native="CloseModal" />
     </div>
   </div>
