@@ -7,24 +7,30 @@
     <div
       @click.self="CloseModal"
       :class="[show_main ? 'opacity-100' : 'opacity-0']"
-      class="bg-black/70 w-full h-full relative
+      class="bg-black/70 w-full h-full
       flex justify-center items-center
       transition-all duration-100">
       <div
         :class="[show_main ? 'scale-100' : 'scale-150']"
         class="rounded-3xl lg:rounded-[32px] 2xl:rounded-[48px]
         bg-dark-gray-3 p-4 lg:p-10 2xl:p-[64px] flex
-        transform transition-all duration-100
+        transform transition-all duration-100 relative
         max-w-[86%] lg:max-w-[74%] max-h-[84%] lg:max-h-[80%]">
         <div class="flex">
           <vue-scroll :ops="ops">
             <slot></slot>
           </vue-scroll>
         </div>
+        <close-btn
+          v-if="cancel_btn_is_inside"
+          class="absolute bg-black/30
+          top-3 lg:top-[16px] right-3 lg:right-[16px]"
+          @click.native="CloseModal" />
       </div>
       <close-btn
-        class="fixed top-[10%] right-[10%]
-        md:top-6 md:right-6 bg-black/30 md:bg-white/10"
+        v-if="!cancel_btn_is_inside"
+        class="fixed bg-black/30 md:bg-white/10
+        top-[10%] lg:top-[16px] right-[10%] lg:right-[16px]"
         @click.native="CloseModal" />
     </div>
   </div>
@@ -38,7 +44,11 @@ export default {
     modal_ref: {
       type: String,
       default: 'modal'
-    }
+    },
+    cancel_btn_is_inside: {
+      type: Boolean,
+      default: false
+    },
   },
   components: {
     CloseBtn
