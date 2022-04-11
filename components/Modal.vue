@@ -8,7 +8,7 @@
       @click.self="CloseModal"
       :class="[show_main ? 'opacity-100' : 'opacity-0']"
       class="bg-black/50 md:bg-black/70 w-full h-full
-      backdrop-blur md:backdrop-filter-none
+      backdrop-blur-sm md:backdrop-filter-none
       flex justify-center items-center
       transition-all duration-100">
       <div

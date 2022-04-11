@@ -21,5 +21,14 @@ export const actions = {
   },
   removeFromModalList({commit}){
     commit('removeFromModalList')
-  }
+  },
+  async CopyEmail({commit}, payload){
+    try {
+      await navigator.clipboard.writeText(payload).then(() => {
+        return true
+      })
+    } catch (err) {
+      return err
+    }
+  },
 }

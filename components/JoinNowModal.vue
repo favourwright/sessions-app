@@ -1,5 +1,5 @@
 <template>
-  <modal modal_ref="join-now">
+  <modal modal_ref="join-now" :cancel_btn_is_inside='true'>
     <div class="text-gray-80">
       <div class="flex flex-col lg:flex-row gap-4 md:gap-10 max-w-[790px]">
         <div class="min-w-max self-center">
@@ -25,9 +25,17 @@
           alt='meeting link'>
           meet.google.com/fbs-gpwp-teu
           <img
-            class="absolute z-10 right-4 bg-black/30 lg:bg-transparent p-2 rounded-lg"
+            :class="[!flash_copied?'visible':'invisible']"
+            class="absolute z-10 right-4 bg-black/30 lg:bg-transparent p-2 rounded-lg
+             transition duration-300"
             src="~/assets/images/icons/link.svg"
             alt="link icon">
+          <span
+            :class="[flash_copied?'visible':'invisible']"
+            class="absolute z-10 right-4 px-2 py-1 rounded-full bg-black/50
+            text-sm transition duration-300">
+            Copied!
+          </span>
         </h1>
       </div>
     </div>
@@ -56,10 +64,19 @@ export default {
     Modal,
     Button2
   },
+  data:()=>({
+    flash_copied: false,
+  }),
   methods:{
-    ...mapActions(['HandleOpenModal']),
+    ...mapActions(['HandleOpenModal', 'CopyEmail']),
     HandleCopyLink(ev){
-      console.log(ev.target.innerText);
+      this.CopyEmail(ev.target.innerText).then(()=>{
+        this.flash_copied=true
+        const flash = setTimeout(()=>{
+          this.flash_copied=false
+          clearTimeout(flash)
+        }, 3000)
+      })
     },
   }
 }
