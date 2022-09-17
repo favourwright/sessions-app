@@ -51,7 +51,7 @@
                   <session-main />
 
                   <div class="grid grid-cols-1 lg:grid-cols-2 desktop-md:grid-cols-1 gap-3 lg:gap-6">
-                    <sessions date="2022-04-29 23:59:00" />
+                    <sessions date="2022-12-29 23:59:00" />
                     <sessions-main-title />
                   </div>
                 </div>
@@ -93,10 +93,10 @@ export default {
     JoinNowModal,
   },
   data:()=>({
-    slide:true,
+    slide:false,
     slide_amount:0,
     show_landing_2_partly:false,
-    landing_2_is_visible:true,
+    landing_2_is_visible:false,
     ops: {
       vuescroll: {
         detectResize: true,
